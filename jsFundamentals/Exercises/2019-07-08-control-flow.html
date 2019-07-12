@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control Flow</title>
+</head>
+<body>
+    <p>Please open the console.</p>
+
+    <script>
+        console.log("ready");
+        const numOne = 5;
+        const numTwo = 190001;
+        const numThree = 2000;
+
+        // option 1
+        if (numOne >= numTwo) {
+            if (numOne >= numThree) {
+                console.log(numOne);
+            } else {
+                console.log(numThree);
+            }
+        } else if (numTwo >= numThree) {
+            console.log(numTwo);
+        } else {
+            console.log(numThree);
+        }
+
+        // option 2
+        let arr = [numOne, numTwo, numThree];
+        while (arr.length > 1) {
+            if (arr[0] >= arr[1]) {
+                arr.splice(1, 1);
+            } else {
+                arr.splice(0,1);
+            }
+        }
+        console.log(arr[0]);
+
+        // option 3
+        arr = [numOne, numTwo, numThree];
+        let max = arr[0];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] >= max) {
+                max = arr[i];
+            }
+        }
+        console.log(max);
+    </script>
+</body>
+</html>

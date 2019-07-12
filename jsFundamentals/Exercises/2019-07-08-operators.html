@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Operators in JS</title>
+    </head>
+
+    <body>
+        <p>Please open the console.</p>
+
+        <script>
+            console.log("ready");
+            console.log("How many seconds are in a year?");
+            const numSecondsInYear = 60 * 60 * 24 * 365.25;
+            console.log(`There are ${numSecondsInYear} seconds in a year.`);
+
+            console.log("If a tube of cookie dough makes 12 cookies, but you eat a quarter of the raw dough before you get them in the oven, how many cookies can you bake?");
+            let numCookies = 12;
+            const cookiesEaten = numCookies * 0.25;
+            numCookies -= cookiesEaten;
+            console.log(`With your partially eaten cookie dough, you can make ${numCookies} cookies.`);
+
+            const trueA = 5 === 5;
+            const trueB = 5 !== "five";
+            const falseA = 7 < 6;
+            const falseB = true && false;
+            console.log("These should return true:", trueA, trueB);
+            console.log("These should return false:", falseA, falseB);
+        </script>
+    </body>
+
+</html>

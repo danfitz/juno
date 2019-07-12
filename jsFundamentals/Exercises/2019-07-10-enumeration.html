@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enumeration</title>
+</head>
+<body>
+    
+    <script>
+        console.log("ready");
+        
+        const movie = {
+            releaseDate: 1999,
+            title: "Titanic",
+            people: {
+                director: "James Cameron",
+                actors: [
+                    "Leonardo DiCaprio",
+                    "Kate Winslet"
+                ]
+            },
+            genre: ["drama", "romance"]
+        }
+
+        const inventory = {
+            apples: 2,
+            oranges: 3,
+            bananas: 6,
+            milk: 2
+        }
+
+        let sent = "We have ";
+        for (const item in inventory) {
+            sent += `${inventory[item]} ${item} `;
+        }
+        sent += "in stock.";
+        console.log(sent);
+
+        for (const item in inventory) {
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

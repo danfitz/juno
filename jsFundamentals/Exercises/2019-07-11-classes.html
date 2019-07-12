@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes</title>
+</head>
+<body>
+    <script>
+        class Character {
+            constructor(name="Player One", locationX, locationY) {
+                this.name = name;
+                this.equipment = [];
+                this.health = 100;
+                this.location = {
+                x: locationX,
+                y: locationY
+                }
+            }
+            walk() {
+                // ...code to make a character walk around
+            }
+            attack() {
+                // ...code to make a character attack
+            }
+        }
+        
+        // Instantiates a player and an enemy
+        const player = new Character("Dan", 0, 0);
+        const enemy = new Character("John", 20, 4);
+
+        // Creates a new enemy at a random location every 2 seconds
+        setInterval(() => {
+            // 1. Use Math.random to generate a randomX randomY
+            const randomX = Math.floor(Math.random() * 100) + 1;
+            const randomY = Math.floor(Math.random() * 100) + 1;
+            // 2. Instantiate a new enemy AT randomX and randomY
+            const newEnemy = new Character("Peon", randomX, randomY);
+            // 3. Print out of the coordinates of the enemy
+            console.log(newEnemy.location.x, newEnemy.location.y);
+        }, 2000);
+
+        // Create a new enemy class called PotatoMonster that has a method "throwPotatoes"
+        // CHALLENGE: Customize the location of the PotatoMonster
+        class PotatoMonster extends Character {
+            constructor(name, locationX, locationY) {
+                super(name, locationX, locationY);
+                this.health = 1000;
+            }
+            throwPotatoes() {
+                // ...code for special attack for Potato Monster
+            }
+        }
+
+        const potatoMonster = new PotatoMonster("Potato Monster", 1000, 1000);
+        console.log(potatoMonster);
+        console.log(potatoMonster.location.x, potatoMonster.location.y);
+
+    </script>
+</body>
+</html>

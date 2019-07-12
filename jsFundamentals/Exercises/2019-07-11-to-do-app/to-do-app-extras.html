@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery To Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+</head>
+<style>
+  #error {
+    display: none;
+    background: rgba(228, 77, 72, 0.5);
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+
+  ul li {
+    cursor: move;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+  }
+
+  ul a {
+    grid-column: span 1 / -1;
+    align-self: center;
+    text-align: right;
+    color: #e44d48;
+  }
+
+  li span.toDoItem span {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+}
+</style>
+<body>
+
+  <div class="container">
+    <h1>jQuery To Do List App</h1>
+    <form>
+      <label for="item">Add an item:</label>
+      <input class="" type="text" id="item" placeholder="Do JavaScript homework...">
+      <input type="submit" value="Add Item">
+    </form>
+    <div id="error" class="alert alert-danger">Input field cannot be left empty!</div>
+    <ul>
+      <!-- To do items get added dynamically here -->
+    </ul>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<script>
+$(document).ready(function() {
+
+    $('form').on('submit', function (e) {
+      e.preventDefault();
+      // store input into variable to reduce lookups
+      $input = $('input[type=text]');
+
+      if ($input.val() !== '') {
+        $('#error').hide();
+        let toDoItem = "<span class='check todo'></span>" + $input.val();
+
+        //allow the removal of items
+        let removalLink = "<a href='#'><i class='fa fa-times-circle'></i></a>";
+
+        let toDoListItem = "<li class='toDoItem'> " + toDoItem + removalLink + "</li>";
+        $('ul').append(toDoListItem);
+        $input.val('');
+
+      } else {
+        // show error if input is empty
+        $('#error').show();
+      }
+      //drag/drop sort items
+      $("ul").sortable();
+    });
+
+  // when the page loads focus on the input field
+  $('input[type=text]').focus();
+
+
+  $('ul').on('click', '.toDoItem', function() {
+      const checkBox = $(this).find('.check');
+      checkBox.toggleClass("todo done");
+      $(this).toggleClass("completed");
+
+      // automatically move completed items to the bottom
+      if (checkBox.is('.done')){
+        const toDoListItem = $(this);
+        moveToBottom(toDoListItem);
+      }
+  });
+
+  //allow the removal of items
+  $('ul').on('click', 'a', function() {
+      const toDoListItem = $(this).parent();
+      toDoListItem.remove();
+  });
+
+  // automatically move completed items to the bottom
+  let moveToBottom = function(item){
+    item.fadeOut(function(){
+      item.appendTo($('ul'));
+      item.fadeIn();
+    });
+  };
+});
+</script>
+</body>
+</html>

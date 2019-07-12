@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        console.log("ready");
+
+        const students = [
+            {
+                name: 'Pat',
+                grade: 58
+            },
+            {
+                name: 'Taylor',
+                grade: 93
+            },
+            {
+                name: 'Dale',
+                grade: 80
+            },
+            {
+                name: 'Casey',
+                grade: 78
+            },
+            {
+                name: 'Jo',
+                grade: 68
+            }
+        ];
+
+        const honours = students.filter((student) => {
+            return student.grade >= 78;
+        }).map((student) => {
+            return student.grade;
+        });
+        console.log(honours);
+        console.log(honours);
+    </script>
+</body>
+</html>

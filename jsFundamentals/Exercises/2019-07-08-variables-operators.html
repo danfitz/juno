@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables and Operators</title>
+</head>
+<body>
+  <p>Don't forget to open your console to see the output!</p>
+  <script>
+    // EXERCISE 1:
+    // Create a variable to hold the user input from a prompt which asks "What is your favorite food?"
+    const favouriteFood = prompt("What is your favourite food?");
+    // console.log this sentence into the console:
+    // "My favorite food is -----." using the answer from the prompt
+    console.log(`My favourite food is ${favouriteFood}.`);
+
+
+    // EXERCISE 2:
+    // Create a variable with the starting value of 0. We will use it to count cookies!
+    // Add 1 to the current value of that variable,
+    let numCookies = 0;
+    numCookies++;
+
+    // Log this sentence into the console:
+    // "I baked a cookie. Now I have -- cookie."
+    console.log(`I baked a cookie. Now I have ${numCookies} cookie.`);
+    // Subtract 1 from the current value of the variable,
+    // then (once again) re-assign the new value to the same variable.
+    numCookies--;
+    // Log this sentence into the console:
+    // "I just ate a cookie. Now I have -- cookies left."
+    console.log(`I just ate a cookie. Now I have ${numCookies} cookies left.`);
+
+    // EXERCISE 3
+    // we were given a random box of cookies!
+    // Create a variable that holds a random number between 1 and 100. 
+    // add that new number to the cookie count and log this sentence into the console "I was given a random amount of cookies, I now have -- cookies!"
+    const randomNumCookies = Math.floor(Math.random() * 100 + 1);
+    numCookies += randomNumCookies;
+    console.log(`I was given a random amount of cookies. I now have ${numCookies}!`);
+  </script>
+</body>
+</html>

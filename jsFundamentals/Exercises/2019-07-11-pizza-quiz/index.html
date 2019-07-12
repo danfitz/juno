@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza Quiz</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+		h1, form, .results {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Pizza Quiz</h1>
+	<form action="">
+		<div>
+			<p>What size pizza are you looking for?</p>
+			<label for="pie">Pie</label>
+			<input type="radio" id="pie" value="pie" name="size">
+
+			<label for="slice">Slice</label>
+			<input type="radio" id="slice" value="slice" name="size">
+		</div>
+		<div>
+			<p>How much are you looking to spend?</p>
+			<label for="$">A little</label>
+			<input type="radio" name="price" id="$" value="$">
+
+			<label for="$$">A little more</label>
+			<input type="radio" name="price" id="$$" value="$$">
+		</div>
+		<input type="submit" value="give me my za options">
+	</form>
+	<div class="results"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

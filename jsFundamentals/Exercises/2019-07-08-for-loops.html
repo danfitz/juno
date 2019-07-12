@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Loops</title>
+</head>
+<body>
+    <script>
+        console.log("ready");
+
+        console.log("Looping through 5 to 12 (inclusive):");
+        for (let i = 5; i <= 12; i++) {
+            console.log(i);
+        }
+
+        console.log("Looping through 1 to 10 in reverse:");
+        for (let i = 10; i >= 1; i--) {
+            console.log(i);
+        }
+
+        console.log("Looping through even numbers from 1 to 20:");
+        for (let i = 1; i <= 20; i+=2) {
+            if (i % 2 !== 0) {
+                i++;
+            }
+            console.log(i);
+        }
+
+        console.log("Looping through Fizz for multiples of 3 and Buzz for multiples of five:");
+        for (let i = 1; i <= 100; i++) {
+            let printValue = "";
+            if (i % 3 === 0) {
+                printValue += "Fizz";
+            }
+            if (Math.floor(i / 5) === i / 5) {
+                printValue += "Buzz";
+            }
+            if (!printValue) {
+                console.log(i);
+                continue;
+            }
+            console.log(printValue);
+        }
+    </script>
+    
+</body>
+</html>
