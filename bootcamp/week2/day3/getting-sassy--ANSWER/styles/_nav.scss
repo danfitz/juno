@@ -1,0 +1,21 @@
+// NAV
+.main-nav {
+  padding: 20px 0;
+  background: $pink;
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    &-item a {
+      color: $white;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 20px;
+    }
+  }
+}

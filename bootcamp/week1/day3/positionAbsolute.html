@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>CSS Position</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            /* Just overriding the browser default to zero */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .yellowBox {
+            /*semi transparent orange*/
+            border: 2px solid rgba(255, 165, 0, 0.7);
+            /*background: rgb(255, 165, 0);*/
+        }
+
+        .blueBox {
+            /*semi transparent blue*/
+            border: 2px solid rgba(65, 105, 255, 0.7);
+            /*background: rgb(65, 105, 255);*/
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .redBox {
+            /*semi transparent red*/
+            border: 2px solid rgba(255, 0, 0, 0.7);
+            /*background: rgb(255, 0, 0); */
+        }
+
+        .greenBox {
+            /*semi transparent green*/
+            border: 2px solid rgba(0, 138, 0, 0.7);
+            /*background: rgb(0, 138, 0); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box yellowBox"><img src="http://www.placekitten.com/100/100" alt="A placeholder image of a kitten"></div>
+    <div class="box blueBox"><img src="https://www.placecage.com/100/100" alt="A placeholder image of Nicolas Cage"></div>
+    <div class="box redBox"><img src="http://baconmockup.com/100/100" alt="A placeholder image of meat"></div>
+    <div class="box greenBox"><img src="https://www.fillmurray.com/100/100" alt="A placeholder image Bill Murray"></div>
+</body>
+
+</html>

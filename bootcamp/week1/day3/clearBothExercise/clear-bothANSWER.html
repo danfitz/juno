@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clear Both</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- 
+	This exercise will get you use floats and clearing both to stop floats on sibling elements. If you need help, check out the Layout class, and find the Clear:Both topic.
+	-->
+
+    <!-- 
+	Exercise: 
+    1. style the following section to look like feature.png in a 3x3 grid
+    2. have the icon sit next to the `h2` and then clear the `p` tag
+	
+	-->
+
+    <style>
+        /*BASE STYLES HERE, DON'T WORRY TO MUCH ABOUT THIS*/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            padding: 50px 0;
+        }
+
+        .feature i {
+            font-size: 30px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /*WRITE YOUR STYLES HERE!*/
+
+        .feature {
+            width: 31%;
+            float: left;
+            margin: 1%;
+        }
+
+        i, h2 {
+            float: left;
+        }
+
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- style the following section to look like feature.png in a 3x3 grid -->
+    <section class="features">
+        <div class="wrapper clearfix">
+            <div class="feature">
+                <i class="fas fa-user-astronaut"></i>
+                <h2>Join Our Team</h2>
+                <p>Want to experience helmet hair in the luke warm vacuum of space?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-space-shuttle"></i>
+                <h2>Transportation Bonus</h2>
+                <p>Want to be in a vehicle that travels at break neck speeds and makes you pass out?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <h2>Health Benefits</h2>
+                <p>Believe in The Flat Earth theory? See for yourself why you're dead wrong.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-astronaut"></i>
+                <h2>Join Our Team</h2>
+                <p>Want to experience helmet hair in the luke warm vacuum of space?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-space-shuttle"></i>
+                <h2>Transportation Bonus</h2>
+                <p>Want to be in a vehicle that travels at break neck speeds and makes you pass out?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <h2>Health Benefits</h2>
+                <p>Believe in The Flat Earth theory? See for yourself why you're dead wrong.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-astronaut"></i>
+                <h2>Join Our Team</h2>
+                <p>Want to experience helmet hair in the luke warm vacuum of space?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-space-shuttle"></i>
+                <h2>Transportation Bonus</h2>
+                <p>Want to be in a vehicle that travels at break neck speeds and makes you pass out?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <h2>Health Benefits</h2>
+                <p>Believe in The Flat Earth theory? See for yourself why you're dead wrong.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-user-astronaut"></i>
+                <h2>Join Our Team</h2>
+                <p>Want to experience helmet hair in the luke warm vacuum of space?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-space-shuttle"></i>
+                <h2>Transportation Bonus</h2>
+                <p>Want to be in a vehicle that travels at break neck speeds and makes you pass out?</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-globe"></i>
+                <h2>Health Benefits</h2>
+                <p>Believe in The Flat Earth theory? See for yourself why you're dead wrong.</p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

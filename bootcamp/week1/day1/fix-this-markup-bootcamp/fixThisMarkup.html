@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Structural Markup</title>
+
+		<!--1.  Use HTML5 semantic tags & elements to structure the different sections of this webpage. If you need help, check out the "Semantic Elements" section of the HTML Elements notes -->
+		<!--2. Replace any deprecated tags that mix content and styling (b, i, br) with more semantic elements -->
+		<!-- 3. Make sure that the heading tags represent the heirarchy of information on the page. Imagine you were a screen reader and make sure that the computer gives the most relevent information to the user in the right order. -->
+		<!-- 4. Make sure that all of the code is properly indented. -->
+		<!-- Bonus: use ul and li tags where applicable -->
+		<style>
+			.wrapper {
+				width: 80%;
+				margin: 0 auto;
+			}
+			p, li { font-size: 0.9rem; }
+			header {
+				display: grid;
+				grid-template-columns: 3fr 1fr;
+			}
+			ul, li {
+				margin: 0;
+				padding: 0.2rem 0;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- This is the header of the page -->
+		<header>
+			<h1>Welcome to HackerYou! I'm the header</h1>
+			<nav>
+				<ul>
+					<li><a href="#about">About Us</a></li>
+					<li><a href="#mission">Mission Statement</a></li>
+					<li><a href="#wisdom">Words of Wisdom</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- This is the main content section of the page -->
+		<main class="wrapper">
+			<h2>About Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam placeat ad, id esse voluptatibus repellendus commodi eos consequatur sapiente sit assumenda quam provident, blanditiis suscipit officia. Sunt neque, iste blanditiis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis blanditiis vero pariatur odit. Amet vero quis illo quam optio excepturi laboriosam deleniti. Minus reiciendis officia autem perferendis fuga laboriosam cum.</p>
+		
+			<!-- This is a content section within the main content section of the page -->
+			<section id="mission">
+				<h3>Mission Statment</h3>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit.</strong></li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				</ul>
+			</section>
+		
+			<!-- This is yet another content section of the page -->
+			<section id="wisdom">
+				<h3>Words of Wisdom</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam placeat ad, id esse voluptatibus repellendus commodi eos <em>consequatur sapiente sit assumenda quam provident, blanditiis suscipit officia</em>. Sunt neque, iste blanditiis.</p>
+			</section>
+		</main>
+
+		<!-- This is the secondary content of the page -->
+		<aside class="wrapper">
+			<h4>Some more information</h4>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil!</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil!</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nihil!</li>
+			</ul>
+		</aside>
+
+		<!-- This is the footer of the page -->
+		<footer>
+			<p>Copyright 2015 HackerYou</p>
+		</footer>
+	
+	</body>
+</html>		

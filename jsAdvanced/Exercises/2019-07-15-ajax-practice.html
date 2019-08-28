@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Practice Exercise</title>
+</head>
+<body>
+	<p>Nothing to see here folks. Open up your console!</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+
+		/* 1a. debugging syntax errors
+			a single AJAX request can end up being several lines of code,
+			so there's lots of opportunities to make syntax errors.
+			Check your console for syntax error messages and see if you can
+			fix it. Make a note of the line number where the error occurred
+			and remember that your mistake is often on the line before. */
+
+		$.ajax({
+			url: 'http://myttc.ca/finch_station.json',
+			method: 'GET',
+			dataType: 'jsonp'
+		}).then(function(data) {
+			console.log('1a. syntax error FIXED!');
+		});
+
+
+		/* 1b. debugging cross-domain errors
+			Run this code as is, and check out the error you get.
+			Fix it by changing the dataType setting to something
+			that facilitates cross-domain requests. */
+
+		$.ajax({
+            url: "http://proxy.hackeryou.com",
+			method: 'GET',
+			dataType: 'json',
+            data: {
+			    reqUrl: 'http://myttc.ca/finch_station.json'
+            }
+		}).then(function(data) {
+			console.log("1b. debugging cross-domain errors, FIXED!");
+		});
+
+		/* 2. Working with output data
+			You can't print an entire JavaScript object out on to the
+			page, so let's practice getting specific bits of info out
+			of the returned data.*/
+
+		$.ajax({
+			url: 'http://myttc.ca/finch_station.json',
+			method: 'GET',
+			dataType: 'jsonp'
+			/*2a. We need to give our success function a placeholder
+				argument to hold the data the API passes back.
+				One convention is to call this 'res'. Go ahead and write
+				that inside the function parentheses. */
+		}).then(function(res) {
+			if (typeof res !== 'undefined'){
+				console.log("2a. You named the success argument. YEAH!");
+			}
+			/*2b. We're not sure exactly what info this API give
+				us, so console.log() out your new `res` argument
+				here so we can look at the info in the console. */
+				console.log(res);
+
+			/*2c. Let's practice getting a specific piece of information.
+				Look through the data object we logged and find the name property. 
+				See if you can get it to log out by accessing
+				the name property from the data object. */
+				console.log(res.name);
+		});
+
+			/* 3. Adding a query string to your GET request
+		    
+						The color API's colorCheck endpoint will take in a query string, and return the index of a CSS color that first matches or best matches. 
+
+						You can read the Color API's documentation here: 
+						https://github.com/tiffcodes/funColors
+					    
+						In your browser paste this link
+						https://fun-fun-colors.herokuapp.com/colorcheck?q=darkcyan
+		    
+						This is one way to send information to the API, using this url as the value in the url property.
+						However we can send query string options in $.ajax by adding another property to the settings object. Modify the request below to send your parameters in the data key of the settings object in your ajax request.*/
+
+			$.ajax({
+				//The url won't change!
+				url: 'https://fun-fun-colors.herokuapp.com/colorcheck',
+				method: 'GET',
+				dataType: 'json',
+                data: {
+                    q: "whitesmoke"
+                }
+			}).then(function (res) {
+                console.log(res);
+				if (res.colorIndex === 145) {
+					$('body').css('background-color', 'whitesmoke');
+					console.log("3a. Sweet colour!")
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Floats, baby, floats</title>
+	<style>
+		 /*This is a CHALLENGE exercise -  match this to the answer file.
+
+		1. The pool color is #91C8E3
+		2. You will need to change every element's box-sizing from content-box to something else. (Do this in the most concise way possible.)
+		3. The pool image is `https://images.unsplash.com/photo-1533140664820-bdd13e39a300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=692&q=80*`
+		4. You will need clearfix.
+		5. When you change the font-size of the header, the line-height of the h1 element should change.
+		6. Max-width of the pool is 1000px.
+		7. You may not add any new classes besides clearfix. Use advanced selectors to target anomalous elements.
+		 */
+
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content:''; clear: both; height: 0; }
+
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+		.wrapper {
+			width: 80%;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		body { background: pink; }
+
+		header {
+			text-align: center;
+			font-size: 40px;
+			letter-spacing: 10px;
+			line-height: 80px;
+		}
+
+		section {
+			padding: 10px 80px;
+			background: #91C8E3;
+			box-shadow: 0 0 0 10px rgba(145,200,227,0.4);
+			border-radius: 20px;
+		}
+
+		.floatie {
+			padding: 10px;
+			float: left;
+			background: url("https://images.unsplash.com/photo-1533140664820-bdd13e39a300?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=692&q=80*");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 200px;
+		}
+
+		</style>
+</head>
+<body>
+	<header>
+		<h1>p🌊o🌊o🌊l</h1>
+		<h2>p🌊a🌊r🌊t🌊y</h2>
+	</header>
+	<section class="wrapper clearfix">
+		<div class="floatie floatie1">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie2">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie3">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie4">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie5">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie6">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie7">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie8">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie9">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie10">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie11">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+		<div class="floatie floatie12">
+			<h2>Here's a floatie</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum cum, sunt tenetur, ut, hic expedita blanditiis nobis reprehenderit facere rem quae natus soluta! Voluptates odit sed doloribus harum officia!</p>
+		</div>
+	</section>
+</body>
+</html>

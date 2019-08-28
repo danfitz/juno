@@ -1,0 +1,97 @@
+
+/* lets set some general styles on the body, feel free to change the background color */
+body {
+    font-family: sans-serif;
+    font-weight: 100;
+    background-color: white;
+}
+
+/* we can change the font size of our h1 */
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+/* let's add some colour to all of our h2s */
+h2 {
+    font-size: 36px;
+}
+
+/* let's change the way the font looks for our h3s */
+h3 {
+    font-size: 24px;
+    font-style: italic;
+}
+
+/* let's write a style to affect all of our heading elements we have on the page */
+h1, h2, h3 {
+    text-transform: capitalize;
+}
+
+/* let's change the line-height of our paragraph text*/
+p {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+/* let's change the way our anchor tags look when they are in a hover state */
+a:hover {
+    background: black;
+    color: white;
+}
+
+/* setting a width and margin: 0 auto; are crucial for a wrapper, now let's mess around with those values */
+.wrapper {
+    width: 850px;
+    background: white;
+    margin: 0 auto;
+    border: 3px solid black;
+}
+
+/* let's change the background and text color of our headings in the title */
+.titleText {
+    text-align: center;
+    padding: 30px;
+    background: red;
+    color: white;
+}
+ /* let's add a background color, play with the padding and add some margin to see how they each affect the overall layout of this section */
+.description {
+    padding: 10px 30px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+/* some styles on the parent of the image, not the image itself */
+.descriptionImageWrap {
+    padding: 10px;
+    border: 5px solid red;
+    display: inline-block;
+    margin: 20px 0;
+}
+/* small stylistic styles from here on down */
+.testimonials {
+    padding: 0 15px;
+}
+
+.quote {
+    margin: 50px 0;
+}
+
+.author {
+    padding-left: 20px;
+}
+
+.team {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* selects all of the figure elements inside of the element with a class of team */
+.team figure {
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+	border: 2px solid black;
+}
+

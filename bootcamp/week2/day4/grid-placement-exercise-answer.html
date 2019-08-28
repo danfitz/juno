@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Placement Exercise ANSWER</title>
+    <style>
+        .item {
+            background: #80CBC4;
+        }
+        .item:nth-child(5n + 1)  {
+            background: #E5F4E3;
+        }
+        .item:nth-child(5n + 3)  {
+            background: #E8D7FF;
+        }
+        .item:nth-child(5n + 4)  {
+            background: #FFA630;
+        }
+        .item:nth-child(5n + 5)  {
+            background: #003F91;
+            color: white;
+        }
+
+        /* create a grid with: 
+            12 columns of even space
+            3 explicit rows that are 50px tall 
+            implicit rows that are 100px tall
+        */
+
+        .grid {
+            margin: 100px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(3, 50px);
+            grid-auto-rows: 100px;
+        }
+
+        /* make the first item span the whole width of the grid, and be 2 columns tall */
+        .item1 {
+            grid-column: 1 / -1;
+            grid-row: span 2;
+        }
+
+        /* make the second item be three columns tall */
+        .item2 {
+            grid-row: span 3;
+        }
+
+        /* make the third item span four columns, but end at line 8 */
+        .item3 {
+            grid-column: span 4 / 8;
+        }
+
+        /* make the fourth item span four columns, but start at line 8 */
+        .item4 {
+            grid-column: 8 / span 4;
+        }
+
+        /* make the fifth item span 2 columns and 2 rows, but end at the second to last column */
+        .item5 {
+            grid-column: span 2 / -2;
+            grid-row: span 2;
+        }
+        
+        /* make the seventh item fill in the gap left by item5
+            columns: start at line 2 and end at line 10 (-4 if you want!) 
+            rows: start at line 4 and span 1 row
+        */
+        .item7 {
+            grid-column: 2 / 10;
+            grid-row: 4;
+        }
+
+        /* make item8 start at line 3 */
+        .item8 {
+            grid-column-start: 3;
+        }
+
+        /* make item9 start at line 2 */
+        .item9 {
+            grid-column: 2;
+        }
+
+        /* make item15 start at column 8 and span 2 columns, and start at row 6 and go until the end
+        
+        this one is tricky! */
+        .item15 {
+            grid-column: 8 / span 2;
+            grid-row: 6 / 8;
+        }
+
+        /* make the last item (25) end at the last column */
+        .item25 {
+            grid-column-end: -1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="grid">
+            <div class="item item1">item1</div>
+            <div class="item item2">item2</div>
+            <div class="item item3">item3</div>
+            <div class="item item4">item4</div>
+            <div class="item item5">item5</div>
+            <div class="item item6">item6</div>
+            <div class="item item7">item7</div>
+            <div class="item item8">item8</div>
+            <div class="item item9">item9</div>
+            <div class="item item10">item10</div>
+            <div class="item item11">item11</div>
+            <div class="item item12">item12</div>
+            <div class="item item13">item13</div>
+            <div class="item item14">item14</div>
+            <div class="item item15">item15</div>
+            <div class="item item16">item16</div>
+            <div class="item item17">item17</div>
+            <div class="item item18">item18</div>
+            <div class="item item19">item19</div>
+            <div class="item item20">item20</div>
+            <div class="item item21">item21</div>
+            <div class="item item22">item22</div>
+            <div class="item item23">item23</div>
+            <div class="item item24">item24</div>
+            <div class="item item25">item25</div>
+        </div>
+    </main>
+</body>
+</html>

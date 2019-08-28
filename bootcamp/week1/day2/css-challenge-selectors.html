@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /* Default Styles, don't worry about them */
+    ul,body {
+      margin:0;
+      padding:0;
+    }
+
+    /*
+      Make the wrapper 600 pixels wide and center it on the page. Give it a white background
+      Give the body a sans-serif font and a grey background.
+    */
+    body {
+      font-family: sans-serif;
+      background: grey;
+    }
+    .wrapper {
+      width: 600px;
+      margin: 0 auto;
+      background: white;
+    }
+
+    /*
+      Take the two blog posts and style them to have a black border.
+      Use only 1 selector
+    */
+    .post {
+      border: 1px solid black;
+    }
+
+    /*
+      Make the links in the blog posts red
+    */
+    .post a {
+      color: red;
+    }
+
+    /*
+      Make the links in the blog post lightblue when hovered 
+    */
+    .post a:hover {
+      color: lightblue;
+    }
+
+    /* 
+      Make the "help" link stand out as the answer shows
+    */
+
+    /*
+      Bonus:
+      1. change the cursor to a question mark when its hovered over
+      2. Add some help text to show up in the yellow tooltip (think back to our attributes lesson!)
+    */
+
+    /*
+      Use a parent child selector to style the list items the same as they appear in the answer key.
+      Pay attention to font, color and spacing (padding)
+    */
+
+    /*
+      Write a selector to turn all odd list items (1,3,5,...) in the zebra list background lightblue
+    */
+
+    /*
+      Write a selector to add a border to the 5th element
+    */
+
+    /*
+      Write a selector to increase the font size of the last item
+      Don't assume there will always be 30 items in the list
+    */
+
+    /* 
+      When you hover over an odd list item:
+        1. turn the background darkblue
+        2. Make the text white
+      This one is especially tricky because it involves two pseudo selectors
+    */
+
+    /* 
+      When you hover over an even list item:
+        1. turn the background grey
+        2. Make the text black
+      This one is especially tricky because it involves two pseudo selectors
+    */
+
+    /*
+      Indent the below HTML properly as well (in the boxes div)
+    */
+
+    /* 
+      The following can be done with just CSS, but you may edit the HTML if you find another way.
+      1. Research how to center the image of the bill murray
+      2. Make the picture a circle
+      3. Add a cool border
+    */
+
+    
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="post post1">
+      <p>Welcome to my website, I think you will really enjoy yourself here.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, iste, placeat, quibusdam quae iure vero facere <a href="#">delectus</a> error esse suscipit aliquid dolorem hic veniam <a href="#">commodi</a> quis. Minima quaerat voluptate recusandae!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing</a> elit. In, iste, placeat, quibusdam <a href="#">quae</a> iure vero facere delectus error esse suscipit aliquid dolorem hic veniam commodi quis. <a href="#">Minima quaerat</a> voluptate recusandae!</p>
+      <p>If you need any <a href="#help" class="help">help</a> make sure to ask!</p>
+    </div><!--.post1-->
+
+    <div class="post post2">
+      <p>Welcome to my website, I think you will really enjoy yourself here.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, iste, placeat, quibusdam quae iure vero facere <a href="#">delectus</a> error esse suscipit aliquid dolorem hic veniam <a href="#">commodi</a> quis. Minima quaerat voluptate recusandae!</p>
+      <p>You should check out the <a href="#">links</a> to my other posts!</p>
+    </div><!--.post2-->
+
+    <ul class="zebra">
+      <li>Item 01</li>
+      <li>Item 02</li>
+      <li>Item 03</li>
+      <li>Item 04</li>
+      <li>Item 05</li>
+      <li>Item 06</li>
+      <li>Item 07</li>
+      <li>Item 08</li>
+      <li>Item 09</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+      <li>Item 15</li>
+      <li>Item 16</li>
+      <li>Item 17</li>
+      <li>Item 18</li>
+      <li>Item 19</li>
+      <li>Item 20</li>
+      <li>Item 21</li>
+      <li>Item 22</li>
+      <li>Item 23</li>
+      <li>Item 24</li>
+      <li>Item 25</li>
+      <li>Item 26</li>
+      <li>Item 27</li>
+      <li>Item 28</li>
+      <li>Item 29</li>
+      <li>Item 30</li>
+    </ul>
+
+    <!-- Indent this HTML properly -->
+    <div class="boxes"> <div class="box1"> <p>I'm box #1</p> </div> <div class="box2"> <p>I'm box #2</p> </div> <div class="box3"> <p>I'm box #3</p> </div> </div> <img src="http://fillmurray.com/500/500" alt="Cute puppy" class="bill"> </div> <!-- .wrapper-->
+
+</body>
+</html>

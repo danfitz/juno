@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Media Queries</title>
+	<style>
+	/*Dark purple:  #4D4861 */
+	/*Medium purple: #605770*/
+	/*Light mauve (pink-purple): #9E7682*/
+	/*Grayish peach: #F7C4A5*/
+
+		/* Landscape phones and down */
+		body{
+			background-color: #F7C4A5;
+		}
+		
+		/* Landscape phone to portrait tablet */
+		@media (min-width: 481px) {
+			body {
+				background-color: #9E7682;
+			}
+		}
+
+		/* Portrait tablet and small desktops */
+		@media (min-width: 769px) {
+			body {
+				background-color: #605770;
+			}
+		}
+
+		/* Desktops */
+		@media (min-width: 941px) {
+			body{
+				background-color: #4D4861;
+			}
+		}
+	/* Rewrite the media queries using min-width. The order of the colors should stay the same. */
+	/*HINT: Remember that CSS rules cascade.*/
+
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

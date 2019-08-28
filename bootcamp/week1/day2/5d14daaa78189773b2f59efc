@@ -1,0 +1,337 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Standard -->
+<title>2019 Summer 1A - Galass-Handbags | Zeplin Scene</title>
+<meta name="description" content="Share designs publicly via Zeplin.">
+<meta name="keywords" content="designer, developer, UI, frontend, collaboration, photoshop, sketch, color palette">
+<meta name="author" content="Zeplin">
+<link rel="canonical" href="/">
+
+<!-- Schema.org -->
+<meta itemprop="name" content="Zeplin Scene">
+<meta itemprop="description" content="Share designs publicly via Zeplin.">
+<meta itemprop="url" content="https://scene.zeplin.io/5d14daaa78189773b2f59efc">
+<meta itemprop="keywords" content="designer, developer, UI, frontend, collaboration, photoshop, sketch, color palette">
+<meta itemprop="image" content="https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/AC55D625-F5DD-425B-ADAB-3DB0AF400849.png">
+<meta itemprop="sourceOrganization" content="Zeplin">
+<meta itemprop="inLanguage" content="en-US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@zeplin_io">
+<meta name="twitter:label1" content="Awesomeness">
+<meta name="twitter:data1" content="Very High">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="2019 Summer 1A - Galass-Handbags | Zeplin Scene">
+<meta property="og:site_name" content="Zeplin Scene">
+<meta property="og:url" content="https://scene.zeplin.io/5d14daaa78189773b2f59efc">
+<meta property="og:description" content="Share designs publicly via Zeplin.">
+<meta property="fb:app_id" content="720988801282810">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/AC55D625-F5DD-425B-ADAB-3DB0AF400849.png">
+
+<!-- Favicons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Zeplin Scene">
+<link rel="apple-touch-startup-image" href="/img/favicon/apple-touch-startup-image-320x480.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+<link rel="mask-icon" href="/img/favicon/icZeplinBlack.svg" color="#ee6723">
+
+<link rel="icon" type="image/png" href="/img/favicon/zeplin-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+
+<meta name="application-name" content="Zeplin Scene">
+<meta name="msapplication-tooltip" content="Zeplin Scene">
+<meta name="msapplication-window" content="width=1440;height=900">
+<meta name="msapplication-navbutton-color" content="#ee6723">
+<meta name="msapplication-starturl" content="https://scene.zeplin.io">
+<meta name="msapplication-TileColor" content="#ee6723">
+<meta name="msapplication-TileImage" content="/img/favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/browserconfig.xml">
+
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" href="/img/favicon/favicon.ico">
+<link rel="shortcut icon" type="image/svg+xml" href="/img/icZeplin.svg">
+<meta name="theme-color" content="#ee6723">
+<link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" type="text/css" href="/css/zeplin.css">
+<script src="/js/zeplin.js" defer></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/scene.css">
+
+        <script src="/js/polyfill/fetch.js" defer></script>
+
+        <script src="https://js.pusher.com/2.2/pusher.min.js" defer></script>
+
+        <script>
+            window.Zeplin = {
+                pusherKey: "9b010bfdcf558c6d8d51",
+                facebookAppId: "720988801282810",
+                urls: {
+                    publicApiURL: "https://public.zeplin.io"
+                },
+                items: [
+                
+                    {
+                        id: "5d38c84e4217057778619d88",
+                        src: "https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/AC55D625-F5DD-425B-ADAB-3DB0AF400849.png",
+                        msrc: "https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/AC55D625-F5DD-425B-ADAB-3DB0AF400849.png",
+                        w: 1600,
+                        h: 4042,
+                        name: "Galass-Handbags-home",
+                        likes: 0
+                    },
+                
+                    {
+                        id: "5d38c84fa6c5a92e514e37cb",
+                        src: "https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/CC2A3153-0F1C-4DCB-BFE8-09ABDAF831FF.png",
+                        msrc: "https://cdn.zeplin.io/5d14daaa78189773b2f59efc/screens/CC2A3153-0F1C-4DCB-BFE8-09ABDAF831FF.png",
+                        w: 400,
+                        h: 4441,
+                        name: "Galass-Handbags -Mobile",
+                        likes: 3
+                    }
+                
+                ]
+            };
+        </script>
+        <script src="/js/scene.js" defer></script>
+    </head>
+    <body data-pid="5d14daaa78189773b2f59efc">
+        <header>
+            <h1 id="projectName">2019 Summer 1A - Galass-Handbags</h1>
+            <div>
+                <h2>Web, </h2>
+                <div>
+                    <a href="#" target="_blank" id="twShare">
+                        <img src="/img/icTwitter.svg">
+                    </a>
+                    <a href="https://twitter.com/share?url=https://scene.zeplin.io%2Fproject%2F5d14daaa78189773b2f59efc&amp;text=Check%20out%202019 Summer 1A - Galass-Handbags%20-%20via%20%40zeplin_io&amp;count=none" target="_blank" id="twTrigger" hidden></a>
+                    <a href="#" target="_blank" id="fbShare">
+                        <img src="/img/icFacebook.svg">
+                    </a>
+                </div>
+            </div>
+            <a href="/" id="signature">
+                <span>crafted in</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" id="zeplinLogo">
+                    <g fill="none" fill-rule="evenodd">
+                        <path d="M6.11286202 20.0134623l-1.84485263.6714722-.0990541 5.4681139 6.3862565-2.3243986c-2.19041117-.7330827-3.7899832-2.0228595-4.4423499-3.8151875"/>
+                        <path d="M7.07832238 14.2299936l-6.40102646 2.329792 3.59071347 4.1251489 1.8448526-.6714722c-.6504582-1.7871005-.2493257-3.8072425.9654603-5.7834687"/>
+                        <path d="M17.8501101 6.3397962C9.69901174 9.30654195 4.4440455 15.4284539 6.11286202 20.0134623L35.6306493 9.26988677c-1.6688165-4.58502915-9.62942-5.89685705-17.7805392-2.93009056"/>
+                        <path d="M23.8933804 22.9435528c8.1511192-2.9667664 13.4159597-9.0615241 11.7372689-13.67366603L6.11286202 20.0134623c1.67867006 4.6121627 9.62941998 5.8968363 17.78051838 2.9300905"/>
+                        <path d="M35.6306493 9.26988677L6.11286202 20.0134623c.57799836 1.5880382 2.78214223 2.3704094 5.87480588 2.3704094 3.0151007 0 6.8747017-.7430608 10.8984939-2.2076289 8.1511399-2.9667458 13.885984-7.7701086 12.7444875-10.90635603"/>
+                        <path d="M29.7558434 6.8994566c-3.0151214 0-6.8747017.7430815-10.8985354 2.20762892C10.7062096 12.073852 4.9713448 16.8771941 6.11286202 20.0134623L35.6306493 9.26988677c-.5779984-1.58805897-2.7821422-2.37043016-5.8748059-2.37043016"/>
+                        <path d="M28.1256735 26.4425973h-.0002074c-.86846 0-2.1497108-.7815829-3.8081967-2.3230087-1.9620786-1.823652-4.2096403-4.4947085-6.3287533-7.5210941-2.11903-3.0262611-3.8602649-6.0518169-4.9029355-8.5193719-1.13602-2.6890211-1.2979915-4.34240385-.4814337-4.9142619.179044-.12525407.3948677-.18871088.6414344-.18871088.6642117 0 1.958407.49269782 4.3515936 2.84003957l.0523379.0513006-.0070738.0729577c-.0163673.1686304-.0314484.3387751-.0448907.5057667l-.0266772.3315976-.2347839-.235676c-2.5785785-2.5882453-3.7136649-2.867671-4.0820422-2.867671-.1050491 0-.1887109.02128365-.2486826.06329086-.3541882.2479566-.3769861 1.46241075.7243909 4.06911846 1.024063 2.42357707 2.739969 5.40337097 4.8316373 8.39044607 2.0917513 2.9873656 4.3049189 5.6189457 6.231919 7.4099876 2.077977 1.9312942 3.0143746 2.1398366 3.3205397 2.1398366.1057129 0 .1916151-.022632.2553208-.0672738.3736463-.2615648.3740819-1.5625642-.8541465-4.3682512l-.056383-.1288014.1234286-.0673152c.1234493-.067336.2428328-.1336348.3547897-.1970501l.1478654-.083724.0681658.155603c.8708871 1.9880505 1.6849555 4.5148097.6174955 5.2624342-.1799776.1259594-.3968592.1898311-.6447121.1898311zm-.0002074-.306663h.0003l-.0002.1533211-.0001-.1533211z"/>
+                        <path d="M24.0912603 22.8597251l-.0124051.1528025c-.2060739 2.5404919-.7486617 5.5947579-2.1633813 5.7183731-.0284612.0025308-.0579803.0038377-.0874995.0038377-.9610625 0-1.8703059-1.3719241-2.7024219-4.0777273-.7873083-2.5598463-1.3982486-5.9968446-1.7202831-9.6778372-.3220552-3.6802251-.3172218-7.17107556.0135875-9.82943657.3605774-2.89679596 1.0470477-4.40959462 2.0402225-4.49643025.0293531-.00269676.059785-.00408662.0898435-.00408662.6971951 0 1.7479353.7865408 2.8236101 4.45010823l-.7023604.1350661c-.3591461-1.2242662-.7505495-2.2199925-1.1391109-2.9042017-.3594365-.6328671-.7089156-.981392-.9841302-.981392-.0090446 0-.0181513.0003734-.0271336.0011409-.4304857.03767162-1.0574198 1.0780604-1.4069405 3.8861745-.3249179 2.61066985-.3288386 6.0492032-.011036 9.6821935.3179894 3.6335297.9189517 7.0191651 1.6921331 9.5331457.3462639 1.1259383.7260712 2.0538722 1.0983484 2.6835446.3432974.5806537.6755173.9004478.9354641.9004478.0089408 0 .0178401-.0004149.0267186-.0011617.4118988-.0359706 1.1881297-1.1186155 1.5148316-4.927725l.7219431-.2468364"/>
+                    </g>
+                </svg>
+            </a>
+        </header>
+        <main>
+            
+                <h3>Color Palette</h3>
+                <div id="colorPalette">
+                    
+                    <div class="color bright" title="White">
+                        <div class="colorPreview" style="background-color: #ffffff"></div>
+                        <div class="colorInfo">
+                            <div class="colorName">White</div>
+                            <div class="colorHex">#ffffff</div>
+                            <div class="colorRGB">255, 255, 255</div>
+                        </div>
+                    </div>
+                    
+                    <div class="color" title="Dark brown">
+                        <div class="colorPreview" style="background-color: #1d0303"></div>
+                        <div class="colorInfo">
+                            <div class="colorName">Dark brown</div>
+                            <div class="colorHex">#1d0303</div>
+                            <div class="colorRGB">29, 3, 3</div>
+                        </div>
+                    </div>
+                    
+                    <div class="color" title="Dried blood">
+                        <div class="colorPreview" style="background-color: #500801"></div>
+                        <div class="colorInfo">
+                            <div class="colorName">Dried blood</div>
+                            <div class="colorHex">#500801</div>
+                            <div class="colorRGB">80, 8, 1</div>
+                        </div>
+                    </div>
+                    
+                    <div class="color" title="Poop">
+                        <div class="colorPreview" style="background-color: #815600"></div>
+                        <div class="colorInfo">
+                            <div class="colorName">Poop</div>
+                            <div class="colorHex">#815600</div>
+                            <div class="colorRGB">129, 86, 0</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            
+            <h3>Font Book</h3>
+            <div id="fontBook">
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 36px; font-weight: normal; font-style: normal">Heading (Galass Handbags)</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">PetitFormalScript, Regular, 90px</div>
+                        <div class="subInfo">Right, Line height: 94.3px</div>
+                    </div>
+                </div>
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 28px; font-weight: normal; font-style: normal">Headings (fall trends, Vegan...)</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">PetitFormalScript, Regular, 54px</div>
+                        <div class="subInfo"></div>
+                    </div>
+                </div>
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 26px; font-weight: normal; font-style: normal">Headings (contact)</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">PetitFormalScript, Regular, 45px</div>
+                        <div class="subInfo">Right</div>
+                    </div>
+                </div>
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 21px; font-weight: normal; font-style: normal">buttons</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">PetitFormalScript, Regular, 25px</div>
+                        <div class="subInfo">Center, Line height: 29px</div>
+                    </div>
+                </div>
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 20px; font-weight: normal; font-style: normal">footer nav (home, blog...)</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">Roboto, Regular, 20px</div>
+                        <div class="subInfo">Line height: 29px</div>
+                    </div>
+                </div>
+                
+                <div class="font">
+                    <div class="fontName" style="font-size: 20px; font-weight: 300; font-style: normal">Body text</div>
+                    <div class="fontStyleDetail">
+                        <div class="mainInfo">Roboto, Light, 20px</div>
+                        <div class="subInfo">Line height: 29px, Letter spacing: 0.2px</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3>Designs</h3>
+            <div id="screens">
+            
+                <div class="screen" data-id="5d38c84e4217057778619d88" data-index="0">
+                    <a href="/project/5d14daaa78189773b2f59efc/screen/5d38c84e4217057778619d88" class="screenLink">
+                        <img src="https://img.zeplin.io/https%3A%2F%2Fcdn.zeplin.io%2F5d14daaa78189773b2f59efc%2Fscreens%2FAC55D625-F5DD-425B-ADAB-3DB0AF400849.png?w=320" srcset="https://img.zeplin.io/https%3A%2F%2Fcdn.zeplin.io%2F5d14daaa78189773b2f59efc%2Fscreens%2FAC55D625-F5DD-425B-ADAB-3DB0AF400849.png?w=640 2x" alt="" class="screenImage">
+                        <div class="imageFrame"></div>
+                    </a>
+                    <div class="screenInfo">
+                        <h4 class="screenName" title="Galass-Handbags-home">Galass-Handbags-home</h4>
+                        <div class="screenLikes">
+                            <data value="0" title="0" class="likeCount">0</data>
+                            <button type="button" class="likeScreenButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16">
+                                    <path fill="none" stroke="#ee6723" stroke-opacity=".8" d="M14.86 13.187c1.4-.392 2.665-1.418 3.433-2.975 1.462-2.984.582-6.758-1.947-8.426-2.07-1.37-4.627-.89-6.31.972C8.37.91 5.806.455 3.71 1.838c-2.566 1.678-3.477 5.436-2.005 8.4.776 1.547 2.052 2.566 3.464 2.955L10.02 15l4.84-1.813z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="screen" data-id="5d38c84fa6c5a92e514e37cb" data-index="1">
+                    <a href="/project/5d14daaa78189773b2f59efc/screen/5d38c84fa6c5a92e514e37cb" class="screenLink">
+                        <img src="https://img.zeplin.io/https%3A%2F%2Fcdn.zeplin.io%2F5d14daaa78189773b2f59efc%2Fscreens%2FCC2A3153-0F1C-4DCB-BFE8-09ABDAF831FF.png?w=320" srcset="https://img.zeplin.io/https%3A%2F%2Fcdn.zeplin.io%2F5d14daaa78189773b2f59efc%2Fscreens%2FCC2A3153-0F1C-4DCB-BFE8-09ABDAF831FF.png?w=640 2x" alt="" class="screenImage">
+                        <div class="imageFrame"></div>
+                    </a>
+                    <div class="screenInfo">
+                        <h4 class="screenName" title="Galass-Handbags -Mobile">Galass-Handbags -Mobile</h4>
+                        <div class="screenLikes">
+                            <data value="3" title="3" class="likeCount">3</data>
+                            <button type="button" class="likeScreenButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16">
+                                    <path fill="none" stroke="#ee6723" stroke-opacity=".8" d="M14.86 13.187c1.4-.392 2.665-1.418 3.433-2.975 1.462-2.984.582-6.758-1.947-8.426-2.07-1.37-4.627-.89-6.31.972C8.37.91 5.806.455 3.71 1.838c-2.566 1.678-3.477 5.436-2.005 8.4.776 1.547 2.052 2.566 3.464 2.955L10.02 15l4.84-1.813z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <template id="heartTemplate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" class="flyingHeart">
+                    <path fill="none" stroke="#fff" stroke-opacity=".8" d="M14.86 13.187c1.4-.392 2.665-1.418 3.433-2.975 1.462-2.984.582-6.758-1.947-8.426-2.07-1.37-4.627-.89-6.31.972C8.37.91 5.806.455 3.71 1.838c-2.566 1.678-3.477 5.436-2.005 8.4.776 1.547 2.052 2.566 3.464 2.955L10.02 15l4.84-1.813z"/>
+                </svg>
+            </template>
+        </main>
+        <!-- Order of pswp__bg, pswp__scroll-wrap, pswp__container and pswp__item elements should not be changed. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__flex-filler"></div>
+                <div class="pswp__item-info">
+                    <div class="pswp__item-name"></div>
+                    <div class="pswp__item-likes">
+                        <data class="pswp__item-like-count"></data>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16">
+                            <path fill="#ee6723" stroke="#ee6723" d="M14.86 13.187c1.4-.392 2.665-1.418 3.433-2.975 1.462-2.984.582-6.758-1.947-8.426-2.07-1.37-4.627-.89-6.31.972C8.37.91 5.806.455 3.71 1.838c-2.566 1.678-3.477 5.436-2.005 8.4.776 1.547 2.052 2.566 3.464 2.955L10.02 15l4.84-1.813z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="pswp__buttons">
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--download" title="Download"></button>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/css/lib/photoswipe.css">
+<link rel="stylesheet" type="text/css" href="/css/lib/default-skin/default-skin.css">
+
+<script src="/js/lib/photoswipe.js"></script>
+<script src="/js/lib/photoswipe-ui-default.js"></script>
+    </body>
+</html>

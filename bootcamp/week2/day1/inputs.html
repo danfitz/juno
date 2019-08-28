@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Forms</title>
+	<style>
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
+		body{
+		 	margin: 0;
+		 	padding: 0;
+		 }
+		input{
+			display: block;
+		}
+		form{
+			border:1px solid mediumorchid;
+			padding:2%;
+			margin:10px;
+			float:left;
+		}
+		.pizzaForm{
+			clear:both;
+		}
+		.pizzaForm fieldset{
+			float:left;
+		}
+	</style>
+</head>
+<body class="clearfix">
+	<form action="" >
+		<input type="text" >
+		<input type="email" >
+		<input type="password" >
+		<input type="color">
+		<input type="file">
+		<input type="search"> 
+		<input type="range">
+		<input type="hidden">
+		<input type="submit">
+		<button type="submit">Button type submit</button>
+		<button type="reset">Button type reset</button>
+
+	</form>
+
+	<!-- Add appropriate attributes here -->
+	<form action="" >
+		<input type="text" maxlength="9">
+		<input type="email" placeholder="Enter an email">
+		<input type="password" >
+		<input type="color" value="#ff00dd">
+		<input type="file">
+		<input type="search"> 
+		<input type="range" value="10">
+		<input type="hidden">
+		<input type="submit" disabled value="Send it to the server!">	
+		<button type="submit">Button type submit</button>
+		<button type="reset">Button type reset</button>
+	</form>
+<!-- Labels, fieldsets, checkboxes, radio buttons -->
+	<form action="" class="pizzaForm clearfix">
+		<fieldset>
+			<legend>Tell us about you!</legend>
+			<label for="firstName">First Name</label>
+			<input type="text" name="firstName" placeholder="First name here" id="firstName">
+
+			<label for="lastName">Last Name</label>
+			<input type="text" name="lastName" placeholder="Last name here" id="lastName">
+		</fieldset>
+		<fieldset>
+			<legend> Select your pizza size:</legend>
+			<label for="smallOption">Small</label>
+			<input type="radio" name="pizzaSize" value="small" id="smallOption">
+
+			<label for="mediumOption">Medium</label>
+			<input type="radio" name="pizzaSize" value="medium" id="mediumOption">
+
+			<label for="largeOption">Large</label>
+			<input type="radio" name="pizzaSize" value="large" checked="true" id="largeOption"> 
+		</fieldset>
+		<fieldset>
+			<legend>Pizza toppings</legend>
+			<label for="olives">Olives</label>
+			<input type="checkbox" id="olives" name="topping" value="olives" checked>
+
+			<label for="mushroom">Mushroom</label>
+			<input type="checkbox" id="mushroom" name="topping" value="mushroom" checked>
+
+			<label for="bacon">Bacon</label>
+			<input type="checkbox" id="bacon" name="topping" value="bacon">
+
+			<label for="sunDriedTomatoes">Sun Dried Tomatoes</label>
+			<input type="checkbox" id="sunDriedTomatoes" name="topping" value="sunDriedTomatoes">
+
+			<label for="pineapple">Pineapple</label>
+			<input type="checkbox" id="pineapple" name="topping" value="pineapple">
+		</fieldset>
+		<textarea name="specialInstructions" id="specialInstructions" cols="30" rows="10"placeholder="Special instructions"></textarea>
+		<select name="levelOfSpiciness">
+			<option value="noSpice" >No Spice</option>
+			<option value="mild" >Mild </option>
+			<option value="medium" >Medium</option>
+			<option value="spicy">Spicy</option>
+			<option value="deathlySpicy" selected>Death.</option>
+		</select>
+	</form>
+</body>
+</html>

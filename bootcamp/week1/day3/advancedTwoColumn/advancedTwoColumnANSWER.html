@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Two Column Layout</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700i" rel="stylesheet">
+    <!-- 
+		This exercise will focus on creating a two column layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+    <style>
+        /*
+		Exercise:
+		1. Add a width of 60% to the section
+		2. Add a width of 40% to the aside
+		3. Make h1 and image side-by-side 
+		4. Float section to the left
+		5. Float aside to the left
+		6. Clear footer using clear:both to reset the float
+
+		** BONUS **
+		7. Add a subheading below the h1. What happens? How can you fix this?
+			- The subheading tries to float. We can fix this by using clear: both! 
+		8. Why doesn't the aside go all the way down if we have less content in it?
+			- The aside is only as big as the content. 
+	*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px 5%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        ul {
+            padding-left: 28px;
+        }
+
+        li {
+            line-height: 1.5;
+        }
+
+        a {
+            color: #4e7c7c;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: left;
+            background: #a8d8d7;
+            padding: 10px 5%;
+        }
+
+        /*3. Make h1 and image side-by-side*/
+        header img {
+            width: 50px;
+            float: left;
+        }
+
+        header h1 {
+            float: left;
+            margin: 15px 0px 0px 10px;
+            font-size: 2em;
+        }
+
+        section {
+            background: #fff;
+            border: 2px solid #efefef;
+            /*1. Add a width of 70% to the section*/
+            width: 70%;
+            /*4. Float section to the left*/
+            float: left;
+            padding: 40px 3%;
+            margin-right: 3%;
+        }
+
+        aside {
+            background: #efefef;
+            /*2. Add a width of 27% to the aside*/
+            width: 27%;
+            /*5. Float aside to the left*/
+            float: left;
+            padding: 40px 3%;
+        }
+
+        footer {
+            background: #4e7c7c;
+            color: #fff;
+            /*6. Clear footer using clear:both to reset the float*/
+            clear: both;
+            padding: 10px 5%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="clearfix">
+        <img src="images/logo.png" alt="Pug Icon, Credit: Pug by Imogen Oh from the Noun Project" class="logo">
+        <h1>Dug the Pug Inc.</h1>
+    </header>
+    <main>
+        <div class="wrapper clearfix">
+            <section>
+                <img src="images/dug-1.jpg" alt="Dug on the Balcony">
+    
+                <p>Doggo ipsum heckin good boys and girls shibe big ol pupperino fluffer woofer, shibe yapper adorable
+                    doggo. Very hand that feed shibe shibe mlem pats you are doin me a concern puggo noodle horse, ur givin
+                    me a spook porgo long woofer bork. Mlem porgo borkdrive puggo wow very biscit heck, aqua doggo h*ck
+                    boofers. doggo.</p>
+    
+                <p>Shooberino long woofer big ol he made many woofs heckin good boys and girls length boy, super chub
+                    heckin ur givin me a spook doggo. Shoob ruff noodle horse porgo boof, maximum borkdrive pupper borkf
+                    many pats fat boi, stop it fren the neighborhood pupper boof. Big ol you are doin me a concern what a
+                    nice floof very hand that feed shibe long woofer very taste wow borkdrive, tungg woofer very taste wow
+                    most angery pupper I have ever seen.</p>
+    
+                </p>
+            </section>
+            <aside>
+                <img src="images/dug-2.jpg" alt="Dug with his tongue out">
+                <ul>
+                    <li><a href="http://forbes.com">Who is Dug?</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Suit_(clothing)">Favourite Foods</li>
+                    <li><a href="http://afunnyweb.com/wp-content/uploads/funny-business-cat-meme-box.jpg">Doggo</a></li>
+                </ul>
+    
+                <p>What a nice floof puggorino you are doin me a concern fat boi you are doin me a concern, I am bekom fat
+                    blop. Pats smol blop vvv very good spot you are doin me a concern, heckin good boys and girls puggorino
+                    borking doggo.</p>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>All jargon generated from https://doggoipsum.com/</p>
+    </footer>
+
+</body>
+
+</html>

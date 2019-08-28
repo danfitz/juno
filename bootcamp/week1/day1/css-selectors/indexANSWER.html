@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Codystar|Quicksand:300" rel="stylesheet">
+
+
+    <title>CSS Selectors</title>
+</head>
+<style>
+    /* article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+    /* input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+    .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } */
+
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        font-size: 2rem;
+    }
+    header{
+        text-align: center;
+        background-image: url('./oliver-cole-252386-unsplash.jpg');
+        position: relative;
+        background-size: cover;
+        background-position: 50% 80%;
+    }
+    .content{
+        padding: 60px 0px;
+        position: relative; 
+        z-index: 1;
+    }
+    div.overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(256, 256, 256, 0.7);
+    }
+    h1{
+        font-family: 'Codystar', cursive;
+        font-size: 6rem;
+        margin: 0;
+        
+    }
+    main{
+        width: 405px;
+        margin: 0 auto;
+    }
+    li{
+        margin: 10px 0px;
+    }
+    /* -------------------------------------------------------------------- */
+
+    /* select all of the ul's on the page */
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* select only the li's in the header */
+    header li {
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 0 10px;
+        color:#f10db2;
+    }
+ 
+    /* select all the elements with the class of 'relaxing' */
+    .relaxing {
+        font-style: italic;
+        font-weight: bold;
+    }
+    /* select all the li elements with the class of 'challenging' in the Just Because list */
+    .just-because .challenging {
+        background: rgb(227, 239, 0);
+        padding: 5px;
+    }
+    /* select all the li elements that are 'inspirational' OR 'skill-building'*/
+    .inspirational, .skill-building {
+        border-bottom: 1px solid #1FA060;
+    }
+    /* select the li tag with the id first-priority*/
+    #first-priority {
+        color: #46e1e1;
+        font-weight: bold;
+    }
+
+    /* select all the li elements with the class of 'easy' in the Great Outdoors list*/
+
+    .the-great-outdoors .easy {
+        color: #f10db2;
+    }
+
+    /* select all the li elements with the class of 'easy' - why doesn't "Nap in Trinity Bellwoods Park change colors"*/ 
+    .easy {
+        color: #9590db;
+    }
+
+    /* select all the li elements with the classes of 'challenging' and 'inspirational' OR 'challenging' and 'skill-building'*/
+    .challenging.inspirational, .challenging.skill-building {
+        letter-spacing: 5px;
+    }
+    
+    /* select ONLY the "Bake a peach pie" li without adding a new class to the HTML {HINT: check out the :not() selector}*/
+    .food-and-drink .skill-building:not(.relaxing){
+        background: peachpuff;
+    }
+
+</style>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Sunny Fun Bucket List</h1>
+            <ul>
+                <li>Fun</li>
+                <li>Summer</li>
+                <li>Fun</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <ul>
+            <li>
+                <h2>Food and Drink</h2>
+                <ul class="food-and-drink">
+                    <li class="easy relaxing" id="first-priority">Patio beers!!</li>
+                    <li class="easy">Eat all the seasonal berries</li>
+                    <li class="skill-building relaxing">Backyard BBQ</li>
+                    <li class="skill-building">Bake a peach pie</li>
+                    <li class="easy">Eat Watermelon</li>
+                    <li class="easy inspirational">Instagram a charcoal ice cream</li>
+                </ul>
+            </li>
+            <li>
+                <h2>The Great Outdoors</h2>
+                <ul class="the-great-outdoors">
+                    <li class="inspirational">Go to the Ward's Island Beach</li>
+                    <li class="easy">Nap in Trinity Bellwoods park</li>
+                    <li class="challenging inspirational">Camping in Algonquin Park</li>
+                    <li class="relaxing inspirational">Picnic in High Park</li>
+                    <li class="challenging skill-building">Bike along Lakeshore</li>
+                    <li class="relaxing">Impromptu Soccer Baseball Game</li>
+                </ul>
+            </li>
+            <li>
+                <h2>Just Because</h2>
+                <ul class="just-because">
+                    <li class="easy relaxing">Jays Game</li>
+                    <li class="easy challenging">Get a sunburn</li>
+                    <li class="easy relaxing">Go to a farmers market</li>
+                    <li class="easy inspirational">Watch Canada Day Fireworks</li>
+                    <li class="relaxing challenging">Cottage with Friends</li>
+                </ul>
+            </li>
+            
+        </ul>
+    </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fun Array Methods</title>
+  </head>
+  <body>
+    <script>
+      let tvShows = [
+        "Game of Thrones",
+        "Parks and Recreation",
+        "Community",
+        "Big Little Lies",
+        "Gilmore Girls",
+        "Survivor",
+        "The Bachelor",
+        "Law & Order",
+        "Hannibal",
+        "Stranger Things",
+        "Daredevil",
+        "The Haunting of Hill House",
+        "Batman: The Animated Series",
+        "Rick & Morty",
+        "The Office",
+        "LOST"
+      ];
+
+      //1. Let's review the current state of our TV show list.
+      //Log the entire array of tv shows to the console.
+      console.log(tvShows);
+
+      //2. How far behind are we in our tv watching endeavour?
+      //Log the length of the array in the phrase "I still need to watch ___ TV Shows"
+      console.log(`I still need to watch ${tvShows.length} TV Shows.`);
+
+      //3. Choose your most anticiapted show.
+      //Log the index of any show such as "The Bachelor".
+      console.log(tvShows.indexOf("The Bachelor"));
+
+      //4. Save that value as a variable, then use that value to log the word "The Bachelor".
+      const bachelorIndex = tvShows.indexOf("The Bachelor");
+      console.log(tvShows[bachelorIndex]);
+
+      //5. Let's find which show comes after The Bachelor on our list. Which show comes before? Console log your results.
+      console.log(tvShows[bachelorIndex + 1]);
+      console.log(tvShows[bachelorIndex - 1]);
+
+      //6. Wait! What about The Good Place? Log the index of "The Good Place". What does this value mean?
+      console.log(tvShows.indexOf("The Good Place"));
+
+      //7. I don't get HBO to watch Game of Thrones. Remove the first element in the array and log the array again.
+      tvShows.shift();
+      console.log(tvShows);
+
+      //8. Your friends spoil the ending of LOST and you decide to skip it. Remove the last item in the array and log the array again.
+      tvShows.pop();
+      console.log(tvShows);
+
+      //9. Let's make a separate list for our Netflix favourites. Remove "Stranger Things", "Daredevil", and "The Haunting of Hill House" from the tvShows array and populate them in a new array called netflixExclusives. Log this new array.
+      const netflixExclusives = tvShows.splice(8, 3);
+      console.log(netflixExclusives);
+
+      //10. Now that we have cleaned up our original tvShows list, let's order it alphabetically and log out the array.
+      const sortedArray = tvShows.sort();
+      console.log(sortedArray);
+
+      //11. Change of plans - sort in REVERSE alphabetical order and log the array again!
+      const reverseArray = tvShows.reverse();
+      console.log(reverseArray);
+
+      //12. After watching Teen Wolf you become interested in actor Jason Bateman's work. Add "Arrested Development" and  "Ozark" to the array and log the array again.
+      tvShows.push("Arrested Deveopment");
+      tvShows.push("Ozark");
+      console.log(tvShows);
+
+      //13. Donald Glover releases a new track and you get inspired to watch "Atlanta" immediately. Add it to the start of the array and, you guessed it, log it out.
+      tvShows.unshift("Atlanta");
+      console.log(tvShows);
+
+      //14. Let's make the perfect binge watching weekend plan with the 6th, 7th, 8th, 9th, and 10th show in the list. Make a new array called perfectWeekend WITHOUT removing them from the shows to watch array.
+      const perfectWeekend = tvShows.slice(6, 11);
+      console.log(perfectWeekend);
+
+      //15. Let's spice up our list. Log the perfect weekend array as a string with your favourite emoticon ⭐️ in-between each TV show.
+      console.log(perfectWeekend.join(" ⭐️ "));
+
+      //16 Awesome! To help with our organization lets combine the perfectWeekend and netflixExclusives arrays into a NEW array called bingeList. Log out your final array.
+      const bingeList = netflixExclusives.concat(perfectWeekend);
+      console.log(bingeList);
+    </script>
+  </body>
+</html>

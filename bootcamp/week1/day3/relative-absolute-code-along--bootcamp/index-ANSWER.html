@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ANSWER</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Yeseva+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* to knock hyro studios onto a new line */
+    .about span {
+      display: block;
+    }
+
+    /* Using position relative over position: absolute, because we want to keep the original foot print of h2 */
+    .about h2 {
+      position: relative;
+      right: 20%;
+    }
+    
+    /* to get the image and welcome blurb/text to sit on the same row  */
+    /* notice how we are floating div.photo-continer that surround the images, not the img element itself */
+    .info-container,
+    .photo-container {
+      float: left;
+    }
+    
+    /* setting the .photo-container to specific width so that it could fit onto the same row as .info-container */
+    .photo-container {
+      width: 45%;
+    }
+    
+    /* setting the .info-container to specific width so that it could fit onto the same row as .photo-container. Using a bit of math to account for the margin*/
+    .info-container {
+      width: 50%;
+      margin-left: 5%;
+    }
+    
+    /* setting the .team-member to specific width so that we can fit 4 in row. Using a bit of math to account for the margin*/
+    .team-member {
+      width: 23%;
+      margin: 1%;
+      float: left;
+      /* using a combo of relative and absolute positioning for the .employee-title */
+      position: relative;
+    }
+
+    /* using a combo of relative and absolute positioning for the .employee-title */
+    /* top and bottom values are in regards to .team-member because it has position:relative */
+    .employee-title {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+    }
+
+    /* to remove extra white space, as img elements are by default inline-block */
+    img {
+      display: block;
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>Hydro Studios.</h1>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <div class="wrapper clearfix">
+        <div class="photo-container">
+          <img src="images/surf.jpg" alt="Surfer in turquoise water">
+        </div>
+        <div class="info-container">
+          <h2>Welcome to <span>Hydro Studios.</span></h2>
+          <h3>We want to work with you!</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque repellat similique, dolore eligendi, illum quas numquam dignissimos vel quibusdam perferendis dolores ducimus architecto laudantium nisi aspernatur, aperiam asperiores. Sit, rem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quidem earum, ab labore voluptatem, dolor unde asperiores eos iusto illum voluptas!</p>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="wrapper clearfix">
+        <h2>Meet the team.</h2>
+        <div class="team-member">
+          <img src="images/employee1.png" alt="Headshot of Jillian">
+          <span class="employee-title">CEO</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee2.png" alt="Headshot of Bobby">
+          <span class="employee-title">Project Manager</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee3.png" alt="Headshot of Bob">
+          <span class="employee-title">Designer</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee4.png" alt="Headshot of Jill">
+          <span class="employee-title">Developer</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

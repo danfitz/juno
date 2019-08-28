@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Control flow exercises</title>
+</head>
+<body>
+	<h1>Nothing to see here, open your console!</h1>
+	<script>
+		// 1. Consider the code below. Predict what will be printed to the console, then check your prediction.
+
+		// const n = 4;
+
+		// if (n > 10) {
+		//   console.log("That's a big number");
+		// } else {
+		//   console.log("It's a small number");
+		// }
+		// ANSWER: "It's a small number" will be printed.
+
+		// 2. Create a basic quizzing program. The program asks a question, the user is prompted to answer, the answer is checked and then a score is printed to the console.
+
+		// POSSIBLE ANSWER:
+		let answer = prompt("What's 3 times 4?");
+		let score = 0;
+
+		if (answer == 12){
+			score = score + 1;
+			console.log(`You're right! Your score is ${score}.`)
+		} else{
+			console.log(`Nope! Your score is ${score}.`)
+		}
+
+		// if (answer === '12') will also work, but if(answer===12) won't. Why not?
+		// Hint: console.log(typeof answer)
+
+
+		// 3. Consider the code below.  Predict what will be printed to the console, then check your prediction. 
+		// 3a. What is `else if`?
+
+		const n = 55;
+
+		if (n > 100) {
+		  console.log("That's a big number");
+		} else if (n > 10 ) {
+		  console.log("It's kinda big");
+		} else {
+		  console.log("It's a small number");
+		}
+		// ANSWER: "It's kinda big" will be printed.
+		// ANSWER: `else if` is another condition with its own statement block.
+
+		// 4. Create a simple "rock-paper-scissors" game. Prompt the user to enter their choice of "rock", "paper" or "scissors" and store this value in a variable. AAssume the computer always throws "rock" (we'll work on making this more dynamic later). If the user's input is "paper" then print to the console "You win!" If the input is "rock" then print "Tie!" and print "You lose!" if the user's input is "scissors". 
+
+		let userInput = prompt("Choose rock, paper, or scissors.")
+		if (userInput === "paper" || userInput === "Paper"){
+			console.log("You win!")
+		} else if (userInput === "rock" || userInput === "Rock"){
+			console.log("Tie!")
+		} else if (userInput === "scissors" || userInput === "Scissors"){
+			console.log("You lose!")
+		}
+</script>
+</body>
+</html>

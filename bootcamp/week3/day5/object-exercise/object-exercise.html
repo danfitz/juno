@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object exercises</title>
+</head>
+<body>
+	<script>
+		
+		//1. Create an object called `hackerYou` which contains information in each of the JavaScript data types you've learned so far. (Hint: the number of courses offered, age of the school, names of instructors, the address, whether it's open, etc.)
+		const hackerYou = {
+			numCourses: 5,
+			age: 5,
+			instructors: [
+				"Asaf",
+				"Suzette",
+				"Colin",
+				"Alex",
+				"Fatima"
+			],
+			address: "Queen Street W",
+			isOpen: true
+		}
+
+		//2. Create an object called "student" which has the properties: `id`, `name`, `age`, `GPA`, and `highSchool`.
+		const student = {
+			id: "10ck49",
+			name: "Dan",
+			age: 27,
+			gpa: 3.4,
+			highSchool: "Woodlands"
+		}
+
+		//2a. Add some other properties to the object.
+		student.isEmployed = false;
+
+		//2b. Using concatenation and bracket notation, write an expression that logs the following sentence to the console: "The student Albert Pierrefonds (ID: 1) is 15 years old. They have a GPA of 1.4 and are from La Reine High."
+		console.log(
+			"The student " + student.name + " (ID: " + student.id + ") is " + student.age + " years old. They have a GPA of " + student.GPA + " and are from " + student.highSchool + "."
+		);
+
+		// 2c. Write the same sentence using dot notation and template literals, console log the same sentence.
+		console.log(
+			`The student ${student.name} (ID: ${student.id}) is ${student.age} years old. They have a GPA of ${student.gpa} and are from ${student.highSchool}.`
+		);
+
+		for (let item in student) {
+			item = "name";
+			console.log(student[item]);
+		}
+
+		const getKey = function(obj, val) {
+			return Object.keys(obj).filter(key => obj[key] === val);
+		}
+
+		console.log(getKey(student, "Woodlands"));
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+$primaryColor: green;
+
+body {
+    background: $primaryColor;
+}
+
+main {
+    nav {
+        a {
+            display: block;
+            background: blue;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

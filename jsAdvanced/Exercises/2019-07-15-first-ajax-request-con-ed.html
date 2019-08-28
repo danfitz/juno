@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>First AJAX Request</title>
+    </head>
+    <body>
+        <p>Open up your console to see how the request went eeee.</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $.ajax({
+                    url: 'https://myttc.ca/finch_station.json',
+                    method: 'GET',
+                    dataType: 'jsonp'
+                }).then(function(data) {
+                    const stopName = data.name;
+                    $("p").text(stopName);
+                    console.log(data);
+                });
+
+                // Fixed using a jsonp
+
+                // $.ajax({
+                // 	url: 'https://myttc.ca/finch_station.json',
+                // 	method: 'GET',
+                // 	dataType: 'jsonp'
+                // }).then(function(data) {
+                // 	console.log('It worked!: ', data);
+                // });
+
+                // Fixed using a proxy server 
+
+                // $.ajax({
+                // 	url: 'http://proxy.hackeryou.com',
+                // 	dataType: 'json',
+                // 	method:'GET',
+                // 	data: {
+                // 		reqUrl: 'https://myttc.ca/finch_station.json',
+                // 		params: {
+                // 			method: 'GET',
+                // 			dataType: 'json'
+                // 		}
+                // 	}
+                // }).then(function(data) {
+                // 	console.log('It worked!: ', data);
+                // });
+            });
+        </script>
+    </body>
+</html>

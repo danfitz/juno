@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Promises Practice</title>
+</head>
+<body>
+	<div class="repos-wrapper">
+		<ul class="repos"></ul>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+
+		/* Exercise 1 - Create your own Promise */
+
+			// a. Use the promise constructor to write a promise and store it in a variable called `myPromise`. Remember that the constructor takes in a callback function as an argument. The callback function itself takes in 2 arguments: functions called `resolve` and `reject`.
+			const myPromise = new Promise(function(resolve, reject) {
+
+				// b. Write a setTimeout that will call `resolve` pass it the string "I've been fulfilled" as it's argument. Make this run after 2 seconds. 
+				setTimeout(function() {
+					resolve("I've been fulfilled");
+				}, 2000);
+
+				// c. Write a setTimeout that will call `reject` pass it the string "I was rejected" as it's argument, Make this run after 4 seconds.
+				setTimeout(function() {
+					reject("I was rejected");
+				}, 4000);
+			});
+		
+			// d. Console.log your promise to see what the promise object you just created looks like when you load the page
+			console.log(myPromise);
+
+			// e. Wait however long you set in your timeout and console.log `myPromise` again to see what has changed
+			setTimeout(function() {
+				console.log(myPromise);
+			}, 2000);
+
+			// f. Change the timeouts to have the reject function called after 2 seconds and the resolve function called after 4 seconds. Repeat steps d. and e. to see the difference in your promise object
+	
+
+		/* Exercise 2 - Handle promise results
+
+			Handle the results of the promise you created and stored in `myPromise`. Use promise methods to chain handlers to your promise that console.log the result.
+
+			Run your code and watch your console to see what happens!
+		*/
+		myPromise
+			.then(function(response) {
+				console.log(response);
+			})
+			.catch(function(err) {
+				console.error(err);
+			});
+
+	
+
+		/* Exercise 3 - Using Async & Await
+
+			a. Write a function called `getGitHubDetails` using the async & await keywords to indicate that it handles some asynchronous actions. It should take one argument: a GitHub user name. 
+
+			b. Use this argument to make a request to get data about that user from the GitHub API (https://api.github.com/users/<username>). If you use fetch to make the request don't forget to extract the response JSON using the .json() method! Console.log the user data.
+
+			c. The user data you get back from the previous request should have a key on it called `repos_url`. Use that url to create another AJAX request to get all of that users' repos. Console.log the repo data.
+
+			Don't forget to call your function!
+
+		*/
+		async function getGitHubDetails(username) {
+			const usernameResponse = await $.ajax(`https://api.github.com/users/${username}`);
+			console.log(usernameResponse);
+
+			const userReposResponse = await $.ajax(usernameResponse.repos_url);
+			console.log(userReposResponse);
+
+			renderUserRepos(userReposResponse);
+		}
+
+		getGitHubDetails("danielfitz");
+		
+
+		// BONUS: Write another function that you can call once you get all of the data you need in `getGitHubDetails`. Call it `renderUserRepos`. It should take an argument which is an array of github repos. Loop through the array and build html to show each repo name and a link to the repository (HINT: use the `html_url` key).
+		function renderUserRepos(repos) {
+
+			repos.forEach(function(repo) {
+				$(".repos").append(`
+					<li class="repo"><a href="${repo.html_url}">${repo.name}</a></li>
+				`);
+			});
+		}
+
+
+		// Keep going - add on as much or as little data to your html as you want! 
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Structural Elements</title>
+    <!-- 
+		This exercise will focus on creating a gallery layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .item {
+            background-color: #791313;
+            text-align: center;
+            color: grey;
+            border-radius: 5px;
+        }
+
+        .wild-one {
+            background-color: #23395B;
+            text-align: center;
+            border-bottom: 10px solid black;
+            padding: 10px;
+            width: 33%;
+        }
+        
+        /*
+        Exercise:
+        1. Add a padding of 10px to .item (notice how the margin from the child elements is no longer affecting the parent?)
+        2. Add a border-bottom of 10px solid #616161 to .item
+        3. Use the nth-child even selector to change the background-color to have a transparency of 0.5
+        4. Give all .item a width of 50%
+        5. Add a float to all of the elements with a class of "item"
+        6. Why don't they go side-by-side? Try setting box-sizing: border-box
+        7. Now change the width of .item to 33%
+        8. Add another div with the class of .wild-one, with more content in the p-tag than the other boxes 
+        9. Move the wild-one div to various places - how does it behave? What if we add a float:left to it?
+        */
+        
+        .item {
+            box-sizing: border-box;
+            width: calc(100% / 3);
+            padding: 10px;
+            border-bottom: 10px solid #616161;
+            float: left;
+        }
+
+        .item:nth-child(even) {
+            background: rgba(129,19,19,0.5);
+        }
+
+        .wild-one {
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="items">
+        <div class="wrapper">
+            <h1>Justice League Members</h1>
+            <div class="item">
+                <h2>Batman</h2>
+                <p>Bruce Wayne</p>
+            </div>
+            
+            <div class="item">
+                <h2>Wonder Woman</h2>
+                <p>Diana Prince</p>
+            </div>
+            
+            <div class="item">
+                <h2>Superman</h2>
+                <p>Kal-El/Clark Kent</p>
+            </div>
+            <div class="wild-one">
+                <h2>The Joker</h2>
+                <p>This guy is a straight-up maniac. Don't mess with him. He will eat off your face. No joke. Seriously. Be careful. How's life? I'm not sure. OK. Thanks. Bye. Bye.</p>
+            </div>
+            
+            <div class="item">
+                <h2>The Flash</h2>
+                <p>Barry Allen</p>
+            </div>
+            
+            <div class="item">
+                <h2>Green Lantern</h2>
+                <p>Jon Stewart</p>
+            </div>
+            
+
+            <div class="item">
+                <h2>Aquaman</h2>
+                <p>Arthur Curry</p>
+            </div>
+
+            <div class="item">
+                <h2>Cyborg</h2>
+                <p>Vic Stone</p>
+            </div>
+
+            <div class="item">
+                <h2>Shazam</h2>
+                <p>Billy Batson</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

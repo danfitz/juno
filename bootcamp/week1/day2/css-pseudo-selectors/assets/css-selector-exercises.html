@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>CSS Exercise</title>
+	<style type="text/css">
+		/* Start off by setting the base styles on the body tag */
+		____ {
+			background:#D12026;
+			color: #363636;
+			font-family: arial;
+		}
+
+		/* Let's change the color and size of our h1 tag */
+		____ {
+			color:#D12026;
+			font-size:50px;
+			margin:0;
+		}
+
+		/* Select all h2 tags and add a little style (there are three of them) */
+		____	{
+			background:black;
+			padding:10px;
+			color:white;
+		}
+
+		/* Select all h3 tags and make them italic */
+		____ {
+			font-style:italic;
+		}
+
+		/* Select all paragraph tags and set the line height to 30px */
+		____ {
+			line-height:30px;
+		}
+
+		/* Change all links to red */
+		____ {
+			color:red;
+		}
+			/* Change all links white with a red background when they are hovered */
+			____ {
+				color:white;
+				background:red;
+			}
+
+		/* Find the element with a class of wrapper and write a selector for it */
+		____ {
+			padding:50px;
+			margin:50px;
+			width:650px;
+			background:white;
+			border:1px solid #D12026;
+		}
+
+		/* Select the section with a class of description and add a blue background and a little padding */
+		____ {
+			background: lightBlue;
+			padding: 20px;
+		}
+
+		/* Select the image within the previous question's description section (hint: use parent/child selectors) */
+		____ {
+			float:left;	
+			margin-right:30px;
+			border:2px solid white;
+		}
+
+		/* Select all the blockquotes, make the font smaller and add a border */
+
+		____ {
+			font-size:12px;
+			border-left:1px solid red;
+			padding-left:10px;
+		}
+
+		/* select the author spans within the quote div and bold them */
+		____ {
+			font-weight:bold;
+		}
+
+		/* Select all the images of the team members */
+		____ {
+			margin-right:12px;
+		}
+		
+		/* Select the last image and take off the right margin (there are at least two different ways to do this) */ 
+
+		____ {
+			margin-right:0;
+		}
+
+		/* Bonus: Add a new section underneath 'team' section called 'bonus' and give it an h2. Style the h2 tag to have a red background */
+		
+		</style>
+</head>
+	<body>
+		<!-- This is where we start the page by wrapping it with a div with the class of wrapper -->
+		<div class="wrapper">
+			<!-- A few headings -->
+			<h1>HackerYou CSS Testing</h1>
+			<h2>Hands-on, project-based learning from industry-leading professionals.</h2>
+			<!-- A div that wraps all the descriptions of hackeryou -->
+			<section class="description">
+				<h3>No grades, just results.</h3>
+				<img src="http://cl.ly/image/2w2d2G0t241K/students.jpg" alt="Students Learning CSS">
+				<p><strong>Hacker</strong> : a person who creates something new out of things that already exist. It's about turning <em>ideas into reality</em>. At HackerYou, it's a good thing.</p>
+				<p>Founded by the team that introduced Ladies Learning Code in 2011, HackerYou is the best way to learn to code. The recipe? Hands-on, project based learning from industry-leading professionals. Small classes, and a 10:1 ratio of students to instructors. Hosted in learning environments that inspire. <strong>That's <a href="http://hackeryou.com">HackerYou</a>.</strong></p>
+			</section>
+			<!-- A div that wraps two quotes -->
+			<section class="quotes">
+				<h2>Quotes</h2>
+				<!-- notice how each quote is wrapped in a div with the class of 'quote' -->
+				<div class="quote">
+					<blockquote>"At <a href="http://mozilla.org">Mozilla</a>, we believe that web literacy is a vital 21st century skill - as important as reading, writing and arithmetic, and I'm excited that Heather and her team have decided to be part of the solution."</blockquote>
+					<span class="author">MARK SURMAN</span>
+				</div>
+				<div class="quote">
+					<blockquote>"The hands-on, project-based nature of HackerYou is perfect for those who want to immerse themselves in a new 'language' and see tangible results."</blockquote>
+					<span class="author">ANDREW LANE</span>
+				</div>
+			</section><!--/.quotes-->
+
+			<!-- finally our team! -->
+			<section class="team">
+				<h2>Our Team</h2>
+				<img src="http://cl.ly/image/3f0s0C3K2i19/heather.jpg" alt="">
+				<img src="http://cl.ly/image/0F11182b0g2t/breanna.jpg" alt="">
+				<img src="http://cl.ly/image/3O2e3H0x3K3e/melissa.jpg" alt="">
+				<img src="http://cl.ly/image/0o3o2L3r3a0g/laura.jpg" alt="">
+			</section>
+
+		</div><!--/.wrapper-->
+	</body>
+</html>

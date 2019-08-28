@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Dropdown Navigation</title>
+	<style>
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content:''; clear: both; height: 0; } 
+
+		.main-menu { background: yellow; }
+		.sub-menu {
+			background: #ececa9;
+			display: none;
+			position: absolute;
+		}
+
+		.main-menu li {
+			float: left;
+			list-style-type: none;
+			position: relative;
+		}
+		.main-menu li a { color: black; }
+
+		.sub-menu li {
+			float: none;
+		}
+		.main-menu li:hover .sub-menu {
+			display: block;
+		}
+		
+	</style>
+</head>
+<body>
+
+<header>
+	<nav>
+		<ul class="main-menu clearfix">static
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="#">One</a></li>
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="work.html">Work <span>&#x25BC;</span></a>
+				<ul class="sub-menu">
+					<li><a href="work.html">Work</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>

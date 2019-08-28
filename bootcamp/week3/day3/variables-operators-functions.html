@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variables and Operators</title>
+</head>
+<body>
+  <p>Don't forget to open your console to see the output!</p>
+  <script>
+
+
+// STEP 1:
+// Assign your name, age, and a random fact about you to variables
+// Create a string that describes you:
+// "My name is ---. I am --- years old. Something you may not know about me is that -----."
+// Print the string to the console
+const myName = "Dan";
+let myAge = 27;
+const myRandomFact = "I don't have any toes";
+const myString = `My name is ${myName}. I am ${myAge} years old. Something you may not know about me is that ${myRandomFact}.`;
+
+console.log(myString);
+
+
+// STEP 2:
+// Tomorrow is your birthday! YAY! Use an operator to print a string to the console that says "Tomorrow I will be ---- years old"?
+// Can you think of multiple ways you could do this? What are the implications of each?
+console.log(`Tomorrow I will be ${myAge = myAge + 1} years old!`);
+console.log(myAge);
+
+// STEP 3:
+// When a user comes to the page, ask them for their name, age, and random fact then save those to variables and print them out as well. (HINT: What is a built in window method to get user input from the browser?)
+const userName = prompt("What is your name?");
+const userAge = prompt("What is your age?");
+const userRandomFact = prompt("Tell us something random about yourself");
+const userString = `Nice to meet you, ${userName}! For a ${userAge} year old, you're looking good! Wow! You ${userRandomFact}? Me too!`;
+
+console.log(userString);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object exercises</title>
+</head>
+<body>
+	<script>
+		
+		//1. Create an object called `hackerYou` which contains information in each of the JavaScript data types you've learned so far. (Hint: the number of courses offered, age of the school, names of instructors, the address, whether it's open, etc.)
+		let hackerYou = {
+			numberOfCourses:23,
+			ageOfSchool: 6,
+			servesVampires:true,
+			instructors:{
+				conEd:"Tiff, Shang, Mark, Katie",
+				bootcamp:"Zoe, Adam, Jenny, Asaf, Colin"
+			}
+		}
+		//2. Create an object called "student" which has the properties: `id`, `name`, `age`, `GPA`, and `highSchool`. 
+		let student ={
+			id:12,
+			name:"Sunghye Min",
+			age: 12,
+			gpa:3.2,
+			highSchool:"Carter Collegiate"
+		}
+		//2a. Add some other properties to the object. 
+		student.failing = false;
+		student['favoriteCourse'] = "Art History";
+
+		//2b. Using concatenation and bracket notation, write an expression that logs the following sentence to the console: "The student Albert Pierrefonds (ID: 1) is 15 years old. They have a GPA of 1.4 and are from La Reine High."
+
+		let anotherStudent = {
+			name:"Albert Pierrefonds",
+			id:1,
+			age:15,
+			gpa:1.4,
+			highSchool:"La Reine High"
+		}
+		console.log( "The student " + anotherStudent.name + " (ID:" +anotherStudent.id + ") is " + anotherStudent.age + " years old. They have a GPA of " + anotherStudent.gpa +" and are from " + anotherStudent.highSchool +".")
+		// 2c. Write the same sentence using dot notation and template literals, console log the same sentence.
+		console.log(`The student ${anotherStudent.name} (ID: ${anotherStudent.id}) is ${anotherStudent.age} years old. They have a GPA of ${anotherStudent.gpa} and are from ${anotherStudent.highSchool}.`)
+
+	</script>
+</body>
+</html>

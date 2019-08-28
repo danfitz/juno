@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object iteration exercises</title>
+</head>
+<body>
+	<script>
+		// Using the following object, complete the numbered tasks. You may use concatenation or template literals.
+		const inventory = {
+			apples: 2,
+			oranges: 3,
+			bananas: 6,
+			milk: 2
+		}
+
+		//1. Print a string that looks like this: 
+		
+		// We have 2 apples, 3 oranges, 6 bananas, and 2 cartons of milk in stock.
+		console.log(`We have ${inventory.apples} apples, ${inventory.oranges} oranges, ${inventory.bananas} bananas, and ${inventory.milk} cartons of milk in stock.`)
+
+		//1a. Print a statement for every item in the inventory like this:
+		for (let item in inventory){
+			console.log(`There are ${inventory[item]} ${item}.`)
+		}
+		// There are 2 apples.
+		// There are 3 oranges.
+		// There are 6 bananas.
+		// There are 2 milk.
+
+		//2. Create an object called outdoorStore.
+		 const outdoorStore ={};
+
+		//2a. Populate it with at least these keys: open (boolean), departmentManagers (object with 4 departments and department managers), customersServed (number)
+		outdoorStore.departmentManagers = {
+			skiing:"claire",
+			fishing:"danny",
+			rockClimbing:"maria-luna",
+			biking:"yoon"
+		}
+		outdoorStore.open = true;
+		outdoorStore.customersServed=100;
+
+		//2b. Print all of the departments to the console.
+		for (let dept in outdoorStore.departmentManagers){
+			console.log(dept)
+		}
+
+		//2c. Change the value of open to false.
+		outdoorStore.open =false;
+
+		//2d. Write a control flow statement that finds out if the store is open. If it is, console log "Welcome!". If not, console log "Come back tomorrow!"
+
+		if(outdoorStore.open === true){
+			console.log("Welcome!")
+		} else if (outdoorStore.open === false){
+			console.log("Come back tomorrow!")
+		}
+		//2e. Put the control flow statement from 2d. into a function expression called checkIfOpen that takes one argument.
+
+		const checkIfOpen = function(value){
+			if(value === true){
+				console.log("Welcome!")
+			} else if (value === false){
+				console.log("Come back tomorrow!")
+			}
+		}
+
+        //2f. Run the checkIfOpen function in the console. Check if the output matches what you would expect given that outdoorStore.open is currently false.
+
+		// 2g. Change the value of outdoorStore.open and verify that checkIfOpen runs correctly.
+
+	</script>
+</body>
+</html>

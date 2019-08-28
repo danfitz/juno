@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+</head>
+<body>
+    
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCWTYqOVit1GzhfkDlFK2Hn2CCCdwBOydg",
+            authDomain: "dan-fitz-sandbox.firebaseapp.com",
+            databaseURL: "https://dan-fitz-sandbox.firebaseio.com",
+            projectId: "dan-fitz-sandbox",
+            storageBucket: "",
+            messagingSenderId: "843193985406",
+            appId: "1:843193985406:web:c387bbc739cd08c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Database reference
+        const dbRef = firebase.database().ref();
+
+        // const firebaseObj = dbRef.push("It's Dan!");
+
+        const userSettings = {
+            editorTheme: "Monokai Bright",
+            // tabs: 4,
+            fontSize: 20,
+            paid: false
+        };
+
+        const newUserSettings = {
+            company: "U of T",
+            paid: true
+        }
+
+        const userId = "-LnJSUKFMk4IpIlYbrzc";
+        const userRef = firebase.database().ref(`/${userId}`);
+
+        const addToProfile = function(data) {
+            // return userRef.set(data);
+            return userRef.update(data)
+        };
+
+        // addToProfile(userSettings);
+        addToProfile(newUserSettings);
+
+
+        dbRef.on("value", function(data) {
+            console.log(data.val());
+        });
+
+        const editor = firebase.database().ref("/editorTheme");
+
+        editor.on("value", function(data) {
+            console.log(data);
+            console.log(data.val());
+        });
+    </script>
+</body>
+</html>

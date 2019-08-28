@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX Practice Exercise</title>
+</head>
+<body>
+	<p>Nothing to see here folks. Open up your console!</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function(){
+
+		/* 1. Debugging syntax errors */
+		// A single AJAX request can end up being several lines of code,
+		// so there are lots of opportunities to make syntax errors.
+		// Check your console for syntax error messages and see if you can
+		// fix them. Make a note of the line number where the error occurred
+		// and remember that your mistake is often on the line before. */
+
+		$.ajax({
+			url: 'https://www.septastats.com/api/current/system/latest',
+			method: 'GET',
+			dataType: 'json'
+		}).then(function (data) {
+			console.log('1. syntax error FIXED!');
+		});
+
+		/* 2. Working with output data */
+		// You can't print an entire JavaScript object to the
+		// page, so let's practice getting specific bits of info out
+		// of the returned data object.
+
+		$.ajax({
+			url: 'https://www.septastats.com/api/current/system/latest',
+			method: 'GET',
+			dataType: 'json',
+			/*2a. We need to give our success function a placeholder
+				argument to hold the data the API passes back.
+				One convention is to call this `res` or `result`. Go ahead and write
+				that inside the function parentheses, so that our "You named the success argument" console.log() shows up. */
+		}).then(function (res) {
+			if (typeof res !== 'undefined') {
+				console.log("2a. You named the success argument. YEAH!");
+			}
+			/*2b. We're not sure exactly what info this API give
+				us, so console.log() out your new `res` argument
+				here so we can look at the info in the console. */
+			console.log(res);
+
+			/*2c. Let's practice getting a specific piece of information.
+				Look through the data object we logged and find the `nextstop` property of the first train in the returned data array.
+				See if you can log the stop name by accessing the value of the `nextstop` property from the data object. */
+			console.log(res.data[0].nextstop);
+		});
+
+			/* 3. Adding a query string to your GET request */
+    
+				// The color API's `colorCheck` endpoint takes a query string and returns the index of a CSS color that first matches or best matches. 
+
+				// In your browser paste this link:
+				// https://fun-fun-colors.herokuapp.com/colorcheck?q=darkcyan
+    			// You should see that, as the docs say, (https://github.com/tiffcodes/funColors)
+    			// you will get an object with two pieces of information: `colorIndex` and `status`
+			    // How do we modify the URL for our API call using a query parameter?
+				// When using $.ajax, we can send query string options by adding another property to the settings object. 
+
+				// Create a `data` object inside the settings object that holds a `q` property with `darkcyan` as a value .
+
+			$.ajax({
+				url: 'https://fun-fun-colors.herokuapp.com/colorcheck',
+				method: 'GET',
+				dataType: 'json',
+				data:{
+					q:'darkcyan'
+				}
+			}).then(function (res) {
+				if (res.colorIndex === 22) {
+					$('body').css('background-color', 'darkcyan');
+					console.log("3a. Sweet colour!")
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

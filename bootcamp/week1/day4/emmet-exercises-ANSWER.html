@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emmet Exercises</title>
+</head>
+<body>
+  
+  <!-- nav>li>a{this is a nav link}*6 -->
+
+  <nav>
+    <li>
+      <a href="">this is a nav link</a>
+      <a href="">this is a nav link</a>
+      <a href="">this is a nav link</a>
+      <a href="">this is a nav link</a>
+      <a href="">this is a nav link</a>
+      <a href="">this is a nav link</a>
+    </li>
+  </nav>
+
+  <!-- nav>(li>a{this is a nav link})*6 -->
+  <nav>
+    <li><a href="">this is a nav link</a></li>
+    <li><a href="">this is a nav link</a></li>
+    <li><a href="">this is a nav link</a></li>
+    <li><a href="">this is a nav link</a></li>
+    <li><a href="">this is a nav link</a></li>
+    <li><a href="">this is a nav link</a></li>
+  </nav>
+  
+  <!-- article.technology.blog>p+img[src="images/"] -->
+  <article class="technology blog">
+    <p></p>
+    <img src="images/" alt="">
+  </article>
+
+  <!-- input[placeholder="Enter your password"]  -->
+  <input type="text" placeholder="Enter your password">
+
+
+  <!-- section.about>h2{About Hacker You}+(p.paragraph-$*3)+a[href="www.hackeryou.com"] -->
+   <section class="about">
+     <h2>About Hacker You</h2>
+     <p class="paragraph-1"></p>
+     <p class="paragraph-2"></p>
+     <p class="paragraph-3"></p>
+     <a href="www.hackeryou.com"></a>
+   </section>
+
+   <!-- input:b[value="Confirm your order"].confirmButton -->
+  <input type="button" value="Confirm your order" class="confirmButton">
+
+</body>
+</html>

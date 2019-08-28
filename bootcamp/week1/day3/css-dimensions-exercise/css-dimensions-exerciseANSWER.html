@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>CSS Exercise</title>
+
+	<style type="text/css">
+		/*
+			This exercise will get you used to specifying widths, margin and padding. 
+		*/ 
+
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		/* 
+			Write a selector for the div element with a class of 'wrapper' and apply the following with CSS:
+				- add a 1px, solid, #791313 border
+				- Set the wrapper to 800px wide
+				- Apply 100px of margin on the top and bottom, even margin on the sides
+				- Add 20px of padding all around
+				- Change the background to #F08080
+		*/
+
+		.wrapper {
+			width:800px;
+			margin:100px auto;
+			padding:20px;
+			border:1px solid #791313;
+			background: #F08080;
+		}
+
+		/*
+			Write a selector for all paragraphs in the page
+			Set the line height of the paragraphs to 25px
+		*/
+		p {
+			line-height:25px;
+		}
+		/* 
+			Write a selector that will select a section with a class of 'description' and apply the following with CSS
+				- Turn the background white
+				- Add 20px of padding all around
+				- Add a border of your liking
+		*/
+
+		.description {
+			background:white;
+			padding:20px;
+			border:1px solid black;
+		}
+
+			/* 
+				Write a selector to get the h2 tag inside of the section with a class of description and set its margin to zero
+			*/
+			.description h2 {
+				margin:0;
+			}
+
+			/* 
+				Write a selector for the ul tag inside of the section with a class of description and apply 20 pixels of padding to its left side only.
+			*/ 
+			.description ul {
+				padding-left:20px;
+			}
+
+			/* 
+				Select all li elements inside of the ul, that is inside of the section with a class of description, and apply the following CSS to them:
+					- Make the background #23395B
+                    - Make the text color white
+					- Add top and bottom padding of 5px, and 20px on the left and right
+					- Add 2px of top margin, 8px on the bottom, and 5px on the left and right
+					---> NOTE: Use shorthand CSS for both margin and padding
+			*/
+
+				.description ul li {
+					background:#23395B;
+					margin: 2px 5px 8px 5px;
+					padding: 5px 20px;
+                    color: white;
+				}
+
+			/*
+				Select all blockquote elements on the page and apply the following CSS to them:
+					- Set a background of #3E5641
+                    - Set the text color to lightgrey
+					- Set the margin to 30px on the top and bottom, and 60px on the sides
+					- Set the padding to 20px on the top and bottom, and 30px on the sides
+					---> NOTE: Use shorthand CSS for both margin and padding
+			*/
+			blockquote {
+				background:#3E5641;
+				margin: 30px 60px;
+				padding: 20px 30px;
+                color: lightgrey;
+			}
+
+			/*
+				Select the section with a class of moreInfo and apply the following CSS to it:
+					- Change the background to #FDF331
+					- Set the width to half that of its parent container
+					- Set the padding to 10% all around
+					- Use the margin property to center the section, and have it 20px below the section above it
+			*/
+			.moreInfo {
+				background: #FDF331;
+				width: 50%;
+				padding: 10%;
+				margin: 20px auto 0 auto;
+			}
+	</style>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <section class="intro">
+                <h1>I am the law.</h1>
+                <p>The future America is an irradiated waste land. On its East Coast, running from Boston to Washington DC, lies Mega City One - a vast, violent metropolis where criminals rule the chaotic streets. The only force of order lies with the urban cops called "Judges" who possess the combined powers of judge, jury and instant executioner. Known and feared throughout the city, Dredd is the ultimate Judge, challenged with ridding the city of its latest scourge - a dangerous drug epidemic that has users of "Slo-Mo" experiencing reality at a fraction of its normal speed. During a routine day on the job, Dredd is assigned to train and evaluate Cassandra Anderson, a rookie with powerful psychic abilities thanks to a genetic mutation. A heinous crime calls them to a neighborhood where fellow Judges rarely dare to venture - a 200 storey vertical slum controlled by prostitute turned drug lord Ma-Ma and her ruthless clan. When they capture one of the clan's inner circle, Ma-Ma overtakes the compound's control center and wages a dirty, vicious war against the Judges that proves she will stop at nothing to protect her empire. With the body count climbing and no way out, Dredd survival.</p>
+            </section>
+
+            <section class="description">
+                <h2>I am the night.</h2>
+                <p>Gotham's new district attorney has been elected. His name is Harvey Dent, and he has a radical new agenda that threatens to take down Gotham's organized crime underworld once and for all with an iron fist. But the emergence of the rogue vigilante known as Batman has caused problems for Dent and his agenda. A new criminal mastermind known only as "The Joker" has arrived and aims to take Gotham out from under Harvey Dent's iron fist. The Joker stages a masterfully planned bank robbery and robs the Gotham mob blind. He uses this money to stage a series of horrific and strategic attacks against the city and its people - each one carefully planned and aimed at Dent and Batman while causing the rest of the city to enter panic mode. Meanwhile, Batman thinks he might have found a lead to The Joker thanks to Wayne Enterprises' dealings with a shady Chinese banker, and that takes Batman and Alfred to Hong Kong. The Joker has no rules, but Batman has only one, and the Joker aims to make Batman break his only rule. But who will be the one to take him out - will it be rogue vigilante Batman or will it be elected official Harvey Dent, the new hero with a face?</p>
+                <ul>
+                    <li>Spin kicks</li>
+                    <li>Elbow blocks</li>
+                    <li>Distract and dodge</li>
+                    <li>Intimidate</li>
+                    <li>Interrogate</li>
+                </ul>
+                <blockquote>There's a point, far out there when the structures fail you, and the rules aren't weapons anymore, they're... shackles letting the bad guy get ahead. One day... you may face such a moment of crisis. And in that moment, I hope you have a friend like I did, to plunge their hands into the filth so that you can keep yours clean!</blockquote>
+            </section>
+
+            <section class="moreInfo">
+                <h2>I'm not locked in here with you, you're locked in here with me.</h2>
+                <ol>
+                    <li>Rorschach</li>
+                    <li>Night Owl</li>
+                    <li>Dr. Manhattan</li>
+                    <li>Silk Spectre II</li>
+                    <li>The Comedian</li>
+                </ol>
+                <p>Set in an alternate 1985 America in which costumed superheroes are part of the fabric of everyday society, and the "Doomsday Clock" - which charts the USA's tension with the Soviet Union - is permanently set at five minutes to midnight. When one of his former colleagues is murdered, the washed up but no less determined masked vigilante Rorschach sets out to uncover a plot to kill and discredit all past and present superheroes. As he reconnects with his former crime-fighting legion - a ragtag group of retired superheroes, only one of whom has true powers - Rorschach glimpses a wide-ranging and disturbing conspiracy with links to their shared past and catastrophic consequences for the future. Their mission is to watch over humanity... but who watches the Watchmen?</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

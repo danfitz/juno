@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Sign-up Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="" name="signUp">
+      
+      <h3>Sign up with your email address</h3>
+      
+      <label for="email" class="visuallyHidden">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email">
+      
+      <label for="confirmEmail" class="visuallyHidden">Confirm email</label>
+      <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm email">
+      
+      <label for="password" class="visuallyHidden">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password">
+      
+      <label for="preferredName" class="visuallyHidden">What should we call you?</label>
+      <input type="text" id="preferredName" name="preferredName" placeholder="What should we call you?">
+
+      <fieldset class="dob">
+        <legend>Date of birth</legend>
+        
+        <label for="day" class="visuallyHidden">Day</label>
+        <input type="text" id="day" name="day" placeholder="Day" maxlength="2">
+        
+        <label for="month" class="visuallyHidden">Month</label>
+        <select name="month" id="month">
+          <option value="0" disabled selected>Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+
+        <label for="year" class="visuallyHidden">Year</label>
+        <input type="text" id="year" name="year" placeholder="Year" maxlength="4">
+      </fieldset>
+
+      <fieldset class="gender">
+        <legend class="visuallyHidden">Gender</legend>
+        
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        
+        <input type="radio" id="nonBinary" name="gender" value="nonBinary">
+        <label for="nonBinary">Non-binary</label>
+      </fieldset>
+
+      <fieldset class="terms">
+        <legend>We may send you emails with news or promotions occasionally. Go to your Email notifications page to control the messages
+        we send.</legend>
+        
+        <div class="termBox">
+          <input type="checkbox" id="shareData" name="condition" required>
+          <label for="shareData">Share my registration data with Spotify's content providers for marketing purposes.</label>
+        </div>
+        
+        <div class="termBox">
+          <input type="checkbox" id="agreeTerms" name="condition" required>
+          <label for="agreeTerms">I agree to the <a href="#">Spotify terms & conditions</a> and <a href="#">Privacy Policy</a>.</label>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Sign up">
+
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </form>
+  </div>
+</body>
+</html>

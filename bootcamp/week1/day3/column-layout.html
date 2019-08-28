@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Column layouts with Floats</title>
+    	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		.wrapper {
+			width: 800px;
+			margin: 25px auto;
+			border: 3px solid black;
+		}
+
+		header, section, aside, footer {
+			padding: 10px;
+		}
+
+		header {
+			text-align: center;
+            background: #191923;
+            color: #fcfcfc;
+		}
+
+		section {
+			border: 1px solid black;
+			width: 60%;
+			float: left;
+		}
+
+		aside {
+			background: #23395B;
+			width: 40%;
+			float: left;
+		}
+
+		footer {
+			background: #791313;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <header>
+            <h1>Welcome To HackerYou</h1>
+        </header>
+        <section>
+            <h2>This is the story of a girl.</h2>
+            <p>Born and raised in Houston, Texas, Beyoncé performed in various singing and dancing competitions as a child. She rose to fame in the late 1990s as lead singer of the R&B girl-group Destiny's Child. Managed by her father Mathew Knowles, the group became one of the best-selling girl groups in history. Their hiatus saw Beyoncé's theatrical film debut in Austin Powers in Goldmember (2002) and the release of her first solo album, Dangerously in Love (2003). The album established her as a solo artist worldwide, debuting at number one on the US Billboard 200 chart and earning five Grammy Awards, and featured the Billboard Hot 100 number one singles "Crazy in Love" and "Baby Boy".</p>
+        </section>
+        <aside>
+            <ul>
+                <li>Clickbait Synergist</li>
+                <li>Paradigm Optimization</li>
+                <li>Bleeding Edge Exit Strategy</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>Copyright 2018</p>
+        </footer>
+    </div>
+</body>
+</html>

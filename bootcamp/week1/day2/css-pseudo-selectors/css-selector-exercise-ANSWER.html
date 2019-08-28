@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Basketball Program</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400"
+      rel="stylesheet"
+    />
+    <style>
+      /* DEFAULT STYLING ALREADY PROVIDED TO YOU */
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        width: 35%;
+        margin: auto;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-top: 0;
+        line-height: 1;
+      }
+
+      section {
+        padding: 30px 0;
+      }
+
+      header {
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 30px 0;
+      }
+
+      /* Start off by setting the base styles on the body tag */
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #f7fafa;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      /* Find the element with a class of wrapper and write a selector for it */
+      .wrapper {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Select both h1 and h3 tags to change their color and transform their text */
+      h1,
+      h3 {
+        color: #973407;
+        text-transform: uppercase;
+      }
+
+      /* Select all button elements and override their default styling */
+      button {
+        font-size: 15px;
+        background: #973407;
+        color: #ffffff;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        cursor: pointer;
+      }
+
+      /* Change all buttons orange with a red white background when they are hovered */
+      button:hover {
+       color: #973407;
+        background: #ffffff;
+        border-color: #973407;
+      }
+
+      /* Select the paragraph within the section with a class of 'description' */
+      .description p {
+        font-weight: 300;
+      }
+
+      /* Select the image within the description section */
+      .description img {
+        float: left;
+        margin-right: 30px;
+      }
+
+      /* Select the section with a class of 'quotes' to add a background color and center align text*/
+      .quotes {
+        background: #fae7ea;
+        text-align: center;
+      }
+
+      /* Select the divs with a class of 'quote' */
+      .quote {
+        width: 75%;
+        margin: auto;
+        font-style: italic;
+      }
+
+      /* Select all the blockquotes, make the font-weight lighter and add some margin */
+      blockquote {
+        font-weight: 300;
+        margin: 0 auto 5px;
+        width: 70%;
+        font-style: italic;
+      }
+
+      /* select the author spans within the quote div and bold them */
+      .quote span.author {
+        font-weight: bold;
+      }
+
+      /* Select all the images of the program options */
+      .programs img {
+        margin-right: 29px;
+      }
+
+      /* Select the last image and take off the right margin (there are at least two different ways to do this) */
+      .programs img:last-child {
+        margin-right: 0;
+      }
+
+      /* Bonus: Add a footer underneath the 'Other Programs' section and give it a <p> tag. Style the <p> tag to have a orange background with wihte text and center aligned */
+      footer {
+        color: #ffffff;
+        background: #973407;
+        text-align: center;
+        padding: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <h1>Basketball Program Overview</h1>
+        <h2>A summary of the newly added Basketball program.</h2>
+      </div>
+    </header>
+
+    <section class="description">
+      <div class="wrapper">
+        <img
+          src="assets/basketball.jpg"
+          alt="A Basketball resting on a Basketball court"
+        />
+        <h3>To The Court</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vel
+          hic porro quod atque! Fugiat explicabo tempora officia quibusdam
+          doloremque labore itaque, voluptatem voluptas atque illum pariatur
+          sequi veniam, ea quia omnis earum dolores perspiciatis voluptatum.
+          Voluptate accusantium soluta, consequuntur harum quisquam, amet dolore
+          enim sed sequi, quia unde maxime? Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Laboriosam, aut! Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Distinctio, esse id impedit aliquam
+          sit soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatibus consectetur consequatur deleniti. Ducimus quia excepturi
+          eius distinctio, veritatis expedita nam? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Rem aperiam placeat est facilis
+          inventore ab, cumque vero deserunt quaerat repudiandae!
+        </p>
+        <button>Read More</button>
+      </div>
+    </section>
+
+    <section class="quotes">
+      <h3>Quotes</h3>
+      <div class="quote">
+        <blockquote>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          magnam sapiente tempora officia natus accusantium rem architecto, quis
+          eveniet aliquam.
+        </blockquote>
+        <span class="author">Alissa M.</span>
+      </div>
+      <div class="quote">
+        <blockquote>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          magnam sapiente tempora officia natus accusantium rem architecto, quis
+          eveniet aliquam.
+        </blockquote>
+        <span class="author">Jeremy A.</span>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="wrapper">
+        <h3>Other Programs</h3>
+        <img
+          src="assets/football.jpg"
+          alt="A Football receiver running and craddling a football."
+        />
+        <img
+          src="assets/running.jpg"
+          alt="Multiple runners racing on a track."
+        />
+        <img
+          src="assets/swimming.jpg"
+          alt="Competitor freestyle swimming in a pool. "
+        />
+        <img
+          src="assets/woking-out.jpg"
+          alt="weightlifting trainer with barbell resting at their feet."
+        />
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <p>copyright 2019</p>
+      </div>
+    </footer>
+  </body>
+</html>

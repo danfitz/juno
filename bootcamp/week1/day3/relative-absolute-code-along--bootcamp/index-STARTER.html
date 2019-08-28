@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>STARTER</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Yeseva+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* put your styles here */
+
+    .photo-container, .info-container {
+      /* border: 2px solid tomato; */
+      float: left;
+    }
+    .photo-container {
+      width: 45%;
+      margin-right: 5%;
+    }
+    .info-container {
+      width: 50%;
+    }
+    .info-container h2 {
+      position: relative;
+      left: -20%;
+    }
+    .info-container h2 span {
+      display: block;
+    }
+
+    .team-member {
+      width: 23%;
+      margin: 1%;
+      float: left;
+      position: relative;
+    }
+    .team-member img { display: block; }
+
+    .employee-title {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>Hydro Studios.</h1>
+    </div>
+  </header>
+  <main>
+    <section class="about">
+      <div class="wrapper clearfix">
+        <div class="photo-container">
+          <img src="images/surf.jpg" alt="Surfer in turquoise water">
+        </div>
+        <div class="info-container">
+          <h2>Welcome to <span>Hydro Studios.</span></h2>
+          <h3>We want to work with you!</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque repellat similique, dolore eligendi, illum quas numquam dignissimos vel quibusdam perferendis dolores ducimus architecto laudantium nisi aspernatur, aperiam asperiores. Sit, rem!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quidem earum, ab labore voluptatem, dolor unde asperiores eos iusto illum voluptas!</p>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="wrapper clearfix">
+        <h2>Meet the team.</h2>
+        <div class="team-member">
+          <img src="images/employee1.png" alt="Headshot of Jillian">
+          <span class="employee-title">CEO</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee2.png" alt="Headshot of Bobby">
+          <span class="employee-title">Project Manager</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee3.png" alt="Headshot of Bob">
+          <span class="employee-title">Designer</span>
+        </div>
+        <div class="team-member">
+          <img src="images/employee4.png" alt="Headshot of Jill">
+          <span class="employee-title">Developer</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

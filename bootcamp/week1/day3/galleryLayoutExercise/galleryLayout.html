@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>Gallery Layout Exercise</title>
+
+    <style>
+        /* OBJECTIVES */
+
+        /* 1. let's get both of our containers sitting next to each other with 20px of padding on each side*/
+
+        /* 2. let's build a 2x2 grid of each feature, with the icon and heading text sitting next to each other and paragraph below it*/
+
+        /* 3. let's make sure our gallery isn't floating, and add 50px of padding to the top and bottom */
+
+        /* 4. let's have all gallery images sitting tightly next to each other on the same line */
+
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            padding: 15px 0;
+        }
+
+        .feature i {
+            font-size: 30px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* end of base styles */
+
+        /* let's add our styles below */
+        .container {
+            border: 2px solid tomato;
+            width: 50%;
+            padding: 20px;
+            float: left;
+        }
+
+        .feature {
+            width: 50%;
+            float: left;
+            border: 2px solid lightblue;
+        }
+
+        .feature i, .feature h2 { float: left; }
+        .feature p { clear: both; padding: 10px 5px; }
+
+        .gallery {
+            clear: both;
+            padding: 50px 0;
+        }
+        .galleryCell {
+            width: 20%;
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="clearfix">
+        <h1>Synergistic Corporate Buzzwords?!</h1>
+        <div class="container">
+            <img src="http://unsplash.it/400/200" alt="A stock image for placeholder purposes">
+        </div>
+        <div class="container clearfix">
+            <div class="feature clearfix">
+                <i class="fas fa-battery-full"></i>
+                <h2>Logistical Nightmare</h2>
+                <p>Close the loop on focusing solely on the bottom line. Identify a ballpark value added activity to beta test.</p>
+            </div>
+            <div class="feature clearfix">
+                <i class="fas fa-battery-three-quarters"></i>
+                <h2>Paradigm Shift</h2>
+                <p>At the end of the day, going forward, prevent domination. Nanotechnology immersion along the
+                    information highway.</p>
+            </div>
+            <div class="feature clearfix">
+                <i class="fas fa-battery-half"></i>
+                <h2>Survival Strategy</h2>
+                <p>Consolidate your energy. Podcasting operational change management inside of workflows. </p>
+            </div>
+            <div class="feature clearfix">
+                <i class="fas fa-battery-quarter"></i>
+                <h2>Low Hanging Fruit</h2>
+                <p>Keeping your eye on the ball while performing a deep dive. Dynamically procrastinate B2B users.</p>
+            </div>
+        </div>
+        <div class="gallery clearfix">
+            <div class="galleryCell">
+                <img src="http://unsplash.it/300/300" alt="A stock image for placeholder purposes">
+            </div>
+            <div class="galleryCell">
+                <img src="http://unsplash.it/400/400" alt="A stock image for placeholder purposes">
+            </div>
+            <div class="galleryCell">
+                <img src="http://unsplash.it/100/100" alt="A stock image for placeholder purposes">
+            </div>
+            <div class="galleryCell">
+                <img src="http://unsplash.it/200/200" alt="A stock image for placeholder purposes">
+            </div>
+            <div class="galleryCell">
+                <img src="http://unsplash.it/500/500" alt="A stock image for placeholder purposes">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

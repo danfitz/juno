@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout using Floats</title>
+    <!--
+    	This exercise will get you use floats and creating galleries. If you need help, check out the Layout class.
+    	-->
+
+    <!--
+    
+    	Exercise:
+    	1. For the first set of elements (grid1), create a 3x4 grid with no margin and 2% padding around the images
+    	2. For the second set of images (grid2), create a 2x2 grid with 1% margin between the images and 10px padding around the images
+    
+    	******************
+    	ACCESSIBILITY NOTE: always provide your alt attributes with a meaningful description. For this exercise we are using placeholder images, so we won't know what image unsplash will provide. For real projects, don't forget your alt attributes.
+    
+    	-->
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        /*adding some borders here so we can see what's going on with our parent elements*/
+        .wrapper {
+            max-width: 1000px;
+            border: 2px solid lightslategrey;
+            /*centre everything*/
+            margin: 0 auto;
+        }
+
+        /* makes sure our images obey the size of their parent */
+        img {
+            width: 100%;
+        }
+
+        /*1. For the first set of images (grid1), create a 3x4 grid with no margin and 2% padding around the images */
+        .grid1 {
+            border: 2px solid #191923;
+        }
+        .grid1 .container {
+            width: 33%;
+            padding: 2%;
+            margin: 0;
+            float: left;
+        }
+
+        /*2. For the second set of images (grid2), create a 2x2 grid with 1% margin between the images and 10px padding around the images*/
+        .grid2 {
+            border: 2px solid #791313;
+        }
+
+        .grid2 .container {
+            background: #23395B;
+            width: 48%;
+            margin: 1%;
+            padding: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="grid1 clearfix">
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+            <div class="container">
+                <h3>Flannel VHS waistcoat swag</h3>
+                <p>Helvetica keytar microdosing craft beer next level poke vexillologist church-key bushwick neutra
+                    farm-to-table mixtape sustainable lo-fi.</p>
+            </div>
+        </div>
+        <!--closing our grid1-->
+
+        <div class="grid2 clearfix">
+            <div class="container">
+                <img src="http://unsplash.it/400/300" alt="">
+            </div>
+            <div class="container">
+                <img src="http://unsplash.it/400/300" alt="">
+            </div>
+            <div class="container">
+                <img src="http://unsplash.it/400/300" alt="">
+            </div>
+            <div class="container">
+                <img src="http://unsplash.it/400/300" alt="">
+            </div>
+        </div>
+        <!--closing our grid2-->
+
+    </div>
+    <!--closing our wrapper -->
+</body>
+
+</html>

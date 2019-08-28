@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Fun ANSWER</title>
+  <style>
+    body {
+      background: peachpuff;
+    }
+    .card {
+      height: 350px;
+      width: 200px;
+      border-radius: 10px;
+      border: 1px solid black;
+      position: absolute;
+      bottom: 12%;
+      background-size: cover;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      bottom: 35%;
+      z-index: 10;
+      transform: scale(1.5);
+    }
+
+    .card1 {
+      background-image: url(images/heart-ace.jpg);
+      left: 25%;
+      transform: rotate(-7deg);
+    }
+
+    .card2 {
+      background-image: url(images/spade-eight.jpg);
+      left: 30%;
+      transform: rotate(5deg);
+    }
+
+    .card3 {
+      background-image: url(images/diamond-king.jpg);
+      left: 35%;
+      transform: rotate(-5deg);
+    }
+    
+    .card4 {
+      background-image: url(images/diamond-seven.jpg);
+      left: 40%;
+      transform: rotate(-10deg);
+    }
+    
+    .card5 {
+      background-image: url(images/clover-ace.jpg);
+      left: 45%;
+      transform: rotate(10deg);
+    }
+
+    .card6 {
+      background-image: url(images/heart-two.jpg);
+      left: 50%;
+      transform: rotate(12deg);
+    }
+
+    .card7 {
+      background-image: url(images/spade-jack.jpg);
+      left: 55%;
+      transform: rotate(15deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card card1"></div>
+  <div class="card card2"></div>
+  <div class="card card3"></div>
+  <div class="card card4"></div>
+  <div class="card card5"></div>
+  <div class="card card6"></div>
+  <div class="card card7"></div>
+</body>
+</html>
