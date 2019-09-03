@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+header {
+  margin: 2rem auto;
+  animation: headerSpin infinite 20s linear;
+  pointer-events: none;
+  background: blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  width: 10rem;
+}
+
+footer {
+  background: red;
+}
+
+@keyframes headerSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

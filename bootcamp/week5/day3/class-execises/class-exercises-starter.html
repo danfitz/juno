@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class exercise</title>
+</head>
+<body>
+  <h1>It's all in the console!</h1>
+  <script>
+    /// LEVEL 1 ///
+    // 1. Create a Plant class that has health (number), leafShape (string), dead (boolean), and grow (function that adds 10 to the plant's health).
+    class Plant {
+      constructor() {
+        this.health = 100;
+        this.leafShape = "dagger";
+        this.isDead = false;
+      }
+
+      grow() {
+        this.health += 10;
+      }
+    }
+
+    /// LEVEL 2 ///
+    
+    // 2. Create an Aloe class that extends from Plant that has a tooWet value (boolean), change the leafShape to 'spine', and add heal (a function that console logs a nice phrase).
+    class Aloe extends Plant {
+      constructor() {
+        super();
+        this.tooWet = true;
+        this.leafShape = "spine";
+      }
+
+      heal() {
+        console.log("I feel better now");
+      }
+    }
+
+    //3. Create an aloe plant named wendy.
+    const wendy = new Aloe();
+    // console.log("Wendy the aloe is born:", wendy);
+
+    //4. wendy the aloe has been in the sun and dried out! Reassign wendy's tooWet value to true.
+    wendy.tooWet = false;
+    // console.log("Wendy is drying out...", wendy);
+
+
+    //5.  The drier soil is good for wendy. Use the code you already wrote to add 10 points to wendy's health.
+    wendy.grow();
+    // console.log("Wendy is growing!", wendy);
+
+    // 6. Create a Tulip class that extends from Plant that takes an argument when it's created. Use that argument to define the Tulip's color. 
+    // (HINT: Inside the constructor, the `this` keyword refers to the class we're defining.)
+    // 7. Also, override the Plant leaf shape so all Tulips have 'spear' as a leafShape value.
+    class Tulip extends Plant {
+      constructor(colour) {
+        super();
+        this.colour = colour;
+        this.leafShape = "spear";
+      }
+    }
+
+    // 8. Make four instances of Tulip with four different colors.
+    const yellowTulip = new Tulip("yellow");
+    const redTulip = new Tulip("red");
+    const orangeTulip = new Tulip("orange");
+    const blueTulip = new Tulip("blue");
+
+    // console.log(yellowTulip, redTulip, orangeTulip, blueTulip);
+
+    /// LEVEL 3 ///
+
+    //9.  Create a StripedTulip class that extends Tulip, and allow it to take two colors as arguments.
+    // 10. Write a seeStripes method inside StripedTulip that returns the string:`This is a _____ and _____ striped tulip.`
+    class StripedTulip extends Tulip {
+      constructor(colour1, colour2) {
+        super();
+        this.colour = {
+          colour1: colour1,
+          colour2: colour2
+        };
+      }
+
+      seeStripes() {
+        console.log(`This is a ${this.colour.colour1} and ${this.colour.colour2} striped tulip.`);
+      }
+    }
+
+    // 11. Create a pink and white StripedTulip.
+    const pinkWhiteTulip = new StripedTulip("pink", "white");
+    // console.log(pinkWhiteTulip);
+    // pinkWhiteTulip.seeStripes();
+
+    // 12. Create a tulip with only one color passed in...
+    const greenTulip = new StripedTulip("green");
+    
+    //12a. ...and call your seeStripes method on it.
+    // greenTulip.seeStripes();
+    
+    // Oh no! `undefined`.
+
+    // 13. Create a new AlwaysStripedTulip class extended from Tulip that has a default value for each color. 
+      // HINT: You may assign a default value to a parameter in the constructor using the assignment operator.
+    // 14. Add a showBothColors method that returns `This is a ________ and _______ striped tulip and neither color will never be undefined.` 
+    class AlwaysStripedTulip extends Tulip {
+      constructor() {
+        super();
+        this.colour = {
+          colour1: "black",
+          colour2: "white"
+        };
+      }
+
+      showBothColours() {
+        console.log(`This is a ${this.colour.colour1} and ${this.colour.colour2} striped tulip and neither colour will ever be undefined.`);
+      }
+    }
+
+    // 15. Create three tulips called noColor, oneColor, and twoColor using AlwaysStripedTulip. Each should have a different number of strings passed in as arguments.
+    const noColor = new AlwaysStripedTulip();
+    const oneColor = new AlwaysStripedTulip("blue");
+    const twoColor = new AlwaysStripedTulip("lilac", "lavender");
+    // console.log(noColor, oneColor, twoColor);
+
+    // 16. Kill all the plants you have stored in variables by changing their isDead value to true.
+    Tulip.prototype.isDead = true;
+
+    const deadTulip = Object.create(Tulip);
+    const ownProps = [];
+    const prototypeProps = [];
+
+    for (let prop in deadTulip) {
+      if (deadTulip.hasOwnProperty(prop)) {
+        ownProps.push(prop);
+      } else {
+        prototypeProps.push(prop);
+      }
+    }
+
+
+    // console.log(ownProps, prototypeProps);
+
+    console.log(Tulip.isPrototypeOf(deadTulip));
+
+  </script>
+</body>
+</html>

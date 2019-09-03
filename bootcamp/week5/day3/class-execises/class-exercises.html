@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class exercise</title>
+</head>
+<body>
+  <h1>It's all in the console!</h1>
+  <script>
+    /// LEVEL 1 ///
+    // 1. Create a Plant class that has health (number), leafShape (string), dead (boolean), and grow (function that adds 10 to the plant's health).
+
+    class Plant {
+      constructor(){
+        this.health=100;
+        this.leafShape='arrowhead';
+        this.isDead=false;
+      }
+      grow(){
+        this.health =  this.health + 10;
+        return 'the plant is growing!'
+      }
+    }
+    let firstPlant =  new Plant();
+
+    /// LEVEL 2 ///
+    
+    // 2. Create an Aloe class extend that has heal (a function that console logs a nice phrase), a tooWet value (boolean) and change the leafShape to 'spine'.
+
+    class Aloe extends Plant{
+      constructor(){
+        super();
+        this.tooWet = true;
+        this.leafShape = 'spine';
+      }
+      heal(){
+        console.log('i will heal you')
+      }
+    }  
+
+    let aloe = new Aloe();
+  
+    //3. Finally, the aloe dried out! Reassign its tooWet value to true.
+
+    aloe.tooWet = true;
+
+    //4.  The drier soil is good for the aloe. Add 10 points to the aloe's health.
+
+    aloe.grow();
+
+    // 5. Create a Tulip class extend that takes an argument when it's created. Use that argument to define the Tulip's color. 
+    // (HINT: Inside the constructor, the `this` keyword refers to the class we're defining.)
+
+    // 6. Also, change the leaf shape to 'spear'
+
+    class Tulip extends Plant{
+        constructor(color){
+          super();
+          this.color = color;
+          this.leafShape = 'spear'
+        }
+    }
+
+    // 7. Make four instances of Tulip with four different colors.
+
+    const red = new Tulip('red');
+    const yellow = new Tulip('yellow');
+    const white = new Tulip('white');
+    const pink = new Tulip('pink');
+
+    /// LEVEL 3 ///
+
+    //8.  Create a StripedTulip class that extends Tulip, and allow it to take two colors as arguments. Store both of those colors in an array.
+
+    // 9. Write a seeStripes method inside StripedTulip that returns the string:`This is a ${this.color} and ${this.anotherColor} striped tulip.`
+
+    class StripedTulip extends Tulip{
+      constructor(color = "purple", anotherColor = "red"){
+        super(color, "white");
+        this.color = color;
+        this.anotherColor= anotherColor;
+      }
+      seeStripes(){
+        return `This is a ${this.color} and ${this.anotherColor} striped tulip.`
+      }
+    }
+
+    // 10. Create a pink and white StripedTulip.
+    const stripey =  new StripedTulip('pink', 'white')
+
+    // 11. Create a tulip with only one color passed in... 
+    const halfStripe = new StripedTulip('yellow')
+    
+    //11a. ...and call your seeStripes method on it.
+    halfStripe.seeStripes();
+    
+    // Oh no! `undefined`.
+
+    // 12. Create a new AlwaysStripedTulip class extended from Tulip that has a default value for each color. 
+    // HINT: You may assign a default value to a parameter in the constructor using the assignment operator. 
+
+
+    // 13. Also create a showBothColors method that returns `This is a ${this.color} and ${this.anotherColor} striped tulip and neither color will never be undefined.` 
+
+      class AlwaysStripedTulip extends Tulip {
+          constructor(color = "purple", anotherColor = "red") {
+            super(color);
+            this.color = color;
+            this.anotherColor = anotherColor;
+          }
+          showBothColors() {
+            return `This is a ${this.color} and ${this.anotherColor} striped tulip and neither color will never be undefined.`
+          }
+        }
+    // 13. Create three tulips called noColor, oneColor, and twoColor using AlwaysStripedTulip. Each should have a different number of strings passed in as arguments.
+
+    const noColor = new AlwaysStripedTulip();
+    const oneColor = new AlwaysStripedTulip("gray");
+    const twoColor = new AlwaysStripedTulip("lime", "peach");
+
+    // 14. Kill all the living things grown from Plant by changing their isDead value to true.
+
+    aloe.isDead = true;
+    red.isDead = true;
+    yellow.isDead = true;
+    pink.isDead = true;
+    white.isDead = true;
+    stripey.isDead = true;
+    halfStripe.isDead = true;
+    noColor.isDead = true;
+    onColor.isDead = true;
+    twoColor.isDead = true;
+    
+
+  </script>
+</body>
+</html>

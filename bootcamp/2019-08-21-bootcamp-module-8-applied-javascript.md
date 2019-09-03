@@ -398,7 +398,7 @@ Object-oriented programming is that idea that you use objects for everything in 
 
 In object-oriented programming, sometimes our objects share many properties and methods in common. It would be tedious to manually write the same properties and methods for every single object we create!
 
-That's why developers created **classes**: blueprints that allow us to recreate objects with initial starting properties and methods.
+What we need is something called **prototypal inheritance**. That's why developers created **classes**: blueprints or *prototypes* that allow us to recreate objects with initial starting properties and methods.
 
 Syntax:
 
@@ -425,3 +425,181 @@ const raccoon = new Character("Billy");
 ```
 
 **Note**: You can think of the `constructor()` function as a little builder that gets called when an object is instantiated.
+
+### Extends
+
+You can  build upon classes to create more classes! So a class can be a blueprint to another class!
+
+```js
+class Bowser extends Character {
+  constructor() {
+    super(); // calls constructor of parent class
+    this.name = "Bowser"; // overrides health property from parent constructor
+  }
+}
+```
+
+**Pro tip**: `super()` actually just calls the constructor of the parent class, giving the extends class the same properties. That means that technically you could just call `super("Bowser")` to give `Bowser` objects the name `"Bowser"`.
+
+## Lexical Scope and Execution Context
+
+Having an awareness of *what's* going on behind the scenes of JavaScript gives you an awareness of why things are done the way they are.
+
+All browsers have a **JavaScript engine** that reads and runs JavaScript code.
+
+The step between reading and running is called **compilation**: converting our JavaScript into machine-readable instructions. During this compilation stage, that's where the engine sets up an **execution context**: an inventory of all our variables and functions.
+
+The set of all these variables and functions is known as the **scope**. In particular, JavaScript has a **lexical scope**: meaning *where* you declare your variables and functions determine its availability (e.g. inside or outside a function).
+
+### Global execution context
+
+When a script first starts, it always starts in the **global execution context**, which is available to every level of the script! This gives you access to:
+
+1. The global object
+2. The `this` keyword, which refers to the `window` object when in a browser
+
+Take this example:
+
+```js
+let name = "Verna";
+let age = "72";
+function phoneCall(number, person){
+  console.log("Calling " + number + "for " + person)
+}
+
+function callGrandma() {
+  let phoneNumber = "416-555-4321"; 
+  phoneCall(phoneNumber, name);
+}
+
+callGrandma();
+```
+
+At the global execution context, the engine only acknowledge `name`, `age`, `phoneCall`, and `callGrandma`.
+
+### Function context
+
+When the engine starts *running* through the code, if it hits a function, it creates a new execution context or **private scope** and runs through the process all over again to the lines *inside* the function.
+
+**Note**: The function context has access to the global execution context! Whenever it can't find any variables or functions inside the function, it looks back to the global execution context!
+
+Example:
+
+```js
+function phoneCall(number, person){
+  console.log("Calling " + number + "for " + person)
+}
+
+function callGrandma() {
+  let phoneNumber = "416-555-4321"; 
+  phoneCall(phoneNumber, name);
+}
+```
+
+The functions above reads their own unique variables like `phoneNumber` for `callGrandma` and `number` for `phoneCall`.
+
+**Pro tip**: The execution context of a function is determined by where it's *defined*, not where it's called. In the example above, the execution context of `phoneCall` *is not* part of `callGrandma` even though it's called inside.
+
+**Another pro tip**: The difference between **scope** and **execution context** is that scope is *part* of the execution context. The scope refers to the variables and functions available to an execution context. The execution context is the scope PLUS the other scopes available. Also, the execution context is responsible for dynamically defining the `this` keyword.
+
+### Revisiting this
+
+The `this` keyword dynamically references different objects depending on the execution context you're in.
+
+In the global execution context, `this` refers to `window`.
+
+Inside a declared function's private scope, `this` refers to `window` still.
+
+**Pro tip**: 90% of the time, `this` will refer to the `window` object!
+
+### Object and this
+
+When used inside objects, `this` will normally refer to the object.
+
+Example:
+
+```js
+const character = {
+  introduction: function() {
+    console.log(this);
+    console.log("HI!");
+  }
+}
+
+character.introduction(); // returns character object
+```
+
+However, say that we create a new variable that stores the references to the `introduction` method.
+
+```js
+const intro = character.introduction;
+
+intro(); // returns window object
+```
+
+The `intro` function, even though it references the *same* function, will have a different execution context that defines `this` differently!
+
+**Note**: The same issue will occur if you define a function *inside* an object method.
+
+### Arrow functions revisited
+
+Arrow functions solve the problems above! Essentially, arrow functions **never get their own definition** of `this`. It will instead get the definition of `this` from the execution context where it was defined!
+
+HOWEVER, an edge case is when you use arrow functions *during* the creation of an object.
+
+```js
+const obj = {
+  prop: "hello",
+  method: () => {
+    console.log(this); // logs window object
+  }
+}
+```
+
+Because the engine is in the process of *creating* the object, `this` hasn't been updated to reference `obj` yet. It will reference `window`.
+
+## Make Our Code More Modular
+
+Just like how SASS has partials, we can break up our JavaScript into **modules**.
+
+To create a module, we have to:
+
+1. Define our primary script as `type="module"` in HTML.
+
+```js
+<script type="module" src="scripts/scripts.js"></script>
+```
+
+2. **Export** code from secondary scripts.
+
+```js
+const add = function(a, b) {
+  return a + b;
+}
+
+export default add;
+```
+
+3. **Import** code into primary script at the top.
+
+```js
+import add from "./add.js";
+```
+
+**Note**: If you use `export default`, the `default` specifier allows you to name the default export into *anything* you want in the import file. For example, `add` could be renamed to `addo`.
+
+**Pro tip**: You *must* have an `export default` for your modules to work.
+
+For all other exports, you just tack `export` at the start of any declaration. Then you *destructure* in your import.
+
+```js
+// In export file
+export const bankAccount = 1000;
+
+// In import file
+import { bankAccount } from "./file.js"; // destructured
+```
+
+### How we'll use modules in the future
+
+NPM or the Node Package Manager is basically a database full of modules!

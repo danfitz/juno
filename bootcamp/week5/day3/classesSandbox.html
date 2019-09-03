@@ -8,7 +8,40 @@
 </head>
 <body>
     <script>
-        
+        class Vehicle {
+            constructor(colour) {
+                this.colour = colour;
+                this.kmPerLitre = 100;
+                this.size = "small";
+                this.numWheels = 4;
+            }
+
+            drive() {
+                console.log("I'm driving!");
+            }
+
+            brake() {
+                console.log("No more driving...");
+            }
+        }
+
+        class Truck extends Vehicle {
+            constructor() {
+                super();
+                this.size = "large";
+                this.kmPerLitre = 1;
+                this.canGoOffroad = true;
+            }
+
+            hitchUp(load) {
+                this.towing = load;
+            }
+        }
+
+        const ourTruck = new Truck();
+        console.log(ourTruck);
+        const ourVehicle = new Vehicle();
+        console.log(ourVehicle);
         
     </script>
 </body>
