@@ -1,19 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FeaturedPark extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    render() {
-        return (
-            <div>
-                <p className="featuredPark">{this.props.name}</p>
-                <button onClick={this.props.removePark}>Remove Park</button>
-            </div>
-        );
-    }
-}
+function FeaturedPark(props) {
+    return (
+        <div>
+            <p className="featuredPark">{props.name}</p>
+            <button onClick={props.removePark}>Remove Park</button>
+        </div>
+    );
+};
 
 export default FeaturedPark;

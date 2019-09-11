@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 // Import css file
 import './App.css';
+import ArtPiece from "./ArtPiece.js";
 
 class App extends Component {
   constructor() {
@@ -12,11 +13,9 @@ class App extends Component {
       counter: 0,
       artArray: []
     }
-    console.log("Hello from the constructor");
   }
 
   componentDidMount() {
-    console.log("Hello from componentDidMount");
     axios({
       url: "https://www.rijksmuseum.nl/api/en/collection",
       method: "GET",
@@ -25,7 +24,7 @@ class App extends Component {
         key: "VeM17szh",
         q: "van gogh",
         format: "json",
-        imgonly: "true"
+        imgonly: true
       }
     }).then((response) => {
       this.setState({
@@ -47,16 +46,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Lifecycle Methods</h1>
+        <h1>Art Again: React Edition</h1>
         <p>COUNT: {this.state.counter}</p>
         <button onClick={this.handleClick}>CLICK ME</button>
         <br />
         {this.state.artArray.length ? this.state.artArray.map(piece => {
           return (
-            <div key={piece.id}>
-              <h2>{piece.title}</h2>
-              <img src={piece.webImage.url} alt=""/>
-            </div>
+            <ArtPiece key={piece.id} piece={piece} />
           );
         }) : "Page loading..." }
       </div>

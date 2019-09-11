@@ -603,3 +603,38 @@ import { bankAccount } from "./file.js"; // destructured
 ### How we'll use modules in the future
 
 NPM or the Node Package Manager is basically a database full of modules!
+
+## Destructuring
+
+**Destructuring** is syntactic sugar in JavaScript that allows us to efficiently store values in objects and arrays into variables, improving readability.
+
+In order to destructure an **object**, do this:
+
+```js
+const obj = { name: "Dan", age: 27 };
+
+const { name, age } = obj;
+```
+
+**Note**: `name` and `age` can't be just any variable names. They have to be the actual object keys. Otherwise, it doesn't work.
+
+In order to destructure an **array**, do this:
+
+```js
+const arr = ["Dan", 27, "Human"];
+
+const [ name, age ] = arr; // ignores value "Human"
+```
+
+**Note**: For arrays, destructuring follows the order of the arrays.
+
+**Pro tip**: You can destructure nested objects and nested arrays!
+
+```js
+const obj = { name: "Dan", child: { name: "Bobby" } };
+
+// Pulls out the name key-value pair from the nested object
+const { child: { name }} = obj;
+```
+
+**Note**: Nested destructuring works because it utilizes the fact that you can rename the variables in your destructure. So `{ child: newName }` destructures the `child` object into the variable `newName`.

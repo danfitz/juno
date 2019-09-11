@@ -141,3 +141,67 @@ class App extends Component {
 ```
 
 Think of passing functions through `props` like throwing a rope down the drilled hole to the child component. Although the child can't directly throw stuff up to the parent component, the child can pull a rope that starts a function in the parent component.
+
+### What's the difference between state and props?
+
+`props` kind of acts like a parameter in a function: you pass in information from the parent for the child to use. `state` is usually better for information that needs to dynamically change.
+
+### Proptypes
+
+Proptypes is an npm package that allows you to gate `props`, checking to make sure that the information you pass is of a certain data type.
+
+## Reusable Components
+
+When we create a class component, we're pulling in all of the functionality that comes with a class component: lifecycle methods, state, etc.
+
+Sometimes we don't need this high-powered functionality. That's when we use a **function component** or **stateless component** or **presentational component**. The entire job of function components is just to return and present JSX.
+
+## Using Firebase in React
+
+1. `npx create-react-app my-react-app` to create React app boilerplate.
+
+2. Create firebase app on [console](https://console.firebase.google.com).
+
+3. Create web app on firebase.
+
+4. `npm install firebase --save` inside `my-react-app` folder.
+
+5. Create a `firebase.js` file inside `src` folder and input the following code:
+
+```js
+// firebase.js
+import firebase from 'firebase';
+
+// Initialize Firebase
+// REPLACE THIS WITH YOUR CONFIG OBJECT
+const firebaseConfig = {
+  apiKey: "myApiKey",
+  authDomain: "fir-react-8e1e7.firebaseapp.com",
+  databaseURL: "https://fir-react-8e1e7.firebaseio.com",
+  projectId: "fir-react-8e1e7",
+  storageBucket: "",
+  messagingSenderId: "490141321241",
+  appId: "1:490141321241:web:6793e9f8d0ec3aa0"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+// this exports the CONFIGURED version of firebase
+export default firebase;
+```
+
+6. Import your configured `firebase` into your `App.js` file.
+
+7. Inside a `componentDidMount()` method, add `const dbRef = firebase.database().ref();`.
+
+## Deploying with Firebase
+
+1. You want to compile your React app into a bunch of static files because that's what the browser will be able to render. To do this, simply use `npm run build`.
+
+2. Globally install `firebase-tools` using `npm install firebase-tools -g`, the CLI for deploying to Firebase.
+
+3. Run `firebase login` to log into your Google account.
+
+4. Run `firebase init` in your project folder to configure your project for Firebase, making sure to make your `build` folder the source.
+
+5. Run `firebase deploy` to push your project's `build` folder to live Firebase site.

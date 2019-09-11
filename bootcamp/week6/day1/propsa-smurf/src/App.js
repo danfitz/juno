@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import FeaturedPark from "./FeaturedPark.js";
+import AuthorDetails from "./AuthorDetails.js";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      featuredParks: ["Sunnybrook", "Trinity Bellwoods", "Cherry Beach"]
+      featuredParks: ["Sunnybrook", "Trinity Bellwoods", "Cherry Beach"],
+      author: {
+        name: "Margaret Atwood",
+        location: {
+          city: "Toronto",
+          province: "Ontario"
+        }
+      }
     };
   };
 
@@ -22,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AuthorDetails author={this.state.author} />
         {
           this.state.featuredParks.map((featuredPark, index) => {
             return (
