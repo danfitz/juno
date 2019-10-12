@@ -205,3 +205,21 @@ export default firebase;
 4. Run `firebase init` in your project folder to configure your project for Firebase, making sure to make your `build` folder the source.
 
 5. Run `firebase deploy` to push your project's `build` folder to live Firebase site.
+
+## Routing
+
+By default, React is literally just serving you everything on one file: the `index.html` file.
+
+Routing makes it possible to create the *experience* of multiple pages.
+
+To create add router to your React app, do the following:
+
+1. `npm install react-router-dom --save-dev`.
+
+2. `import { BrowserRouter as Router, Router, Link } from "react-router-dom";` to include React Router in your app.
+
+3. Wrap your `App` component render with a `<Router></Router>` component. **Note**: You can only have **1** Router component in your entire app.
+
+4. Inside `<Router></Router>`, add a `<Route path="/myPath" component={componentToRenderAtPath} />`. Now `componentToRenderAtPath` will render only when the user goes to `myApp.com/mypath`.
+
+5. Add a `<Link to="/myPath">My Link</Link>` to point to the route, which when clicked, displays the component for the route.
