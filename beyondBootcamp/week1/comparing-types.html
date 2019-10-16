@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Comparing Types</title>
+</head>
+
+<body>
+  <script>
+    // Here's an assertion function that checks if a condition is true. If it is not, it should throw an error
+
+    const assert = (condition, message) => {
+      if (!condition) {
+        console.error(`❌ ${message}`)
+      } else {
+        console.log(`✅ ${message}`)
+      }
+    }
+
+    //
+    // Below you will see what are called "assertions". Think of them like if statements that either pass or fail.
+    // Right now they are all failing.
+    //
+
+    //
+    // Can you assign the variables below values in order to make them pass?
+    //
+
+    let myBool = true // I have completed the first one for you, assigning the boolean value of true to myBool, making the assertion pass
+    let myUndefined = undefined;
+    let myString = "hello";
+    let myNumber = 1;
+    let mySymbol = Symbol();
+    let myObject = {};
+    let myFunction = function() {};
+    let myNull = null;
+    let myArray = [];
+
+    assert(typeof myBool === 'boolean', 'type of myBool is a boolean')
+
+    assert(
+      typeof myUndefined === 'undefined',
+      'type of myUndefined is undefined'
+    )
+
+    assert(typeof myString === 'string', 'myString is a string')
+
+    assert(typeof myNumber === 'number', 'myNumber is a number')
+
+    /* If you're unsure of how to create a symbol, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+     */
+    assert(typeof mySymbol === 'symbol', 'mySymbol is a symbol')
+
+    assert(typeof myObject === 'object', 'myObject is an object')
+
+    assert(typeof myFunction === 'function', 'myFunction is a function')
+
+    // write an assertion that checks to see if myNull is equal to null
+    assert(myNull === null, 'myNull is a null')
+
+    // write an assert function that checks to see if myArray is equal to an array
+    assert(myArray.constructor === Array, 'myArray is an array')
+  </script>
+</body>
+
+</html>
