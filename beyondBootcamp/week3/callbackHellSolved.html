@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Callbacks Solved</title>
+</head>
+
+<body>
+  <script>
+    const getUserByEmail = (email, cb) => {
+      console.log(`Getting user information for ${email}...`)
+      return setTimeout(() => {
+        cb({
+          id: 1,
+          name: 'Orion',
+          email
+        })
+      }, 2000)
+    }
+
+    const getFavouriteBooks = (id, cb) => {
+      console.log(`Getting books for user with id: ${id}....`)
+      return setTimeout(() => {
+        cb([
+          {
+            id: 0,
+            name: 'Why cats paint',
+            author: 'Heather Busch'
+          },
+          {
+            id: 1,
+            name: 'Goblinproofing One\'s Chicken',
+            author: 'Reginald Bakeley'
+          },
+          {
+            id: 2,
+            name: 'Nostradamus Ate My Hamster',
+            author: 'Robert Rankin'
+          }
+        ])
+      }, 2000)
+    }
+
+    const getAuthorDetails = (id, cb) => {
+      const authorDetails = [
+        {
+          name: 'Heather Busch',
+          country: 'New Zealand',
+          born: 1978
+        },
+        {
+          name: 'Reginald Bakeley',
+          country: 'England',
+          born: 1870
+        },
+        {
+          name: 'Robert Rankin',
+          country: 'United States',
+          born: 1988
+        }
+      ]
+      return setTimeout(() => {
+        return cb(authorDetails[id])
+      }, 2000)
+    }
+
+// 1. Call 'getUserByEmail', and give it an email and callback to extract the user.
+getUserByEmail("dan@danfitz.com", user => {
+  // 2. Call 'getFavouriteBooks' and give it a user id to get back a list of favourite books for that user
+  getFavouriteBooks(user.id, favouriteBooks => {
+    // 3. Map over the favourite books that come back
+    favouriteBooks.map(book => {
+      // 4. Call 'getAuthorDetails' for each book id in order to get a list of favourite books
+      getAuthorDetails(book.id, authorDetails => console.log(authorDetails));
+    });
+  });
+});
+
+
+
+  </script>
+</body>
+
+</html>

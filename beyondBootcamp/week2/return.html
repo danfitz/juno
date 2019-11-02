@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const countdown = () => {
+      console.log("Three");
+      console.log("Two");
+      console.log("One");
+      // return;
+    };
+
+    // countdown();
+
+    const user = { name: "Simon", isAdmin: true };
+
+    const login = user => {
+      if (user.isAdmin) {
+        console.log("Access granted");
+      } else {
+        console.log("You are not allowed!");
+      };
+    };
+
+    login(user);
+  </script>
+</body>
+</html>

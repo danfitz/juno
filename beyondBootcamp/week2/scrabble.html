@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    (function(window) {
+      if (!window) throw "You're not in a browser!";
+      
+      String.prototype.cleanWord = function() {
+        return this.trim().toLowerCase();
+      }
+
+      const scoresMap = {
+        1: ["e", "a", "i", "o", "n", "r", "t", "l", "s", "u"],
+        2: ["d", "g"],
+        3: ["b", "c", "m", "p"],
+        4: ["f", "h", "v", "w", "y"],
+        5: ["k"],
+        8: ["j", "x"],
+        10: ["q", "z"]
+      };
+
+
+      window.countScore = (word) => {
+        const wordArr = word.cleanWord().split("");
+
+        const score = wordArr.reduce((acc, cur) => {
+          for (let key in scoresMap) {
+            if (scoresMap[key].includes(cur)) return acc + Number(key);
+          };
+        }, 0);
+
+        return score;
+      };
+
+    })(window);
+
+    console.log(countScore("xray"));
+  </script>
+</body>
+</html>

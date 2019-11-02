@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // get: making API requests
+    // get("https://pokeapi.co/api/v2/pokemon/ditto/")
+
+    // const get = (url, callback) => {
+    //   const xhr = new XMLHttpRequest(); // creates instance of XML request
+      
+    //   // Open request
+    //   xhr.open("GET", url);
+      
+    //   // When the request is fulfilled, run this function
+    //   xhr.onload = function() {
+    //     const jsonResponse = JSON.parse(this.responseText); // convert JSON string to object
+    //     callback(jsonResponse); // pass response into callback
+    //   };
+
+    //   // Send request
+    //   xhr.send();
+    // };
+
+    // get("https://pokeapi.co/api/v2/pokemon/ditto/", res => console.log(res));
+
+    const get = url => {
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest(); // creates instance of XML request
+        
+        // Open request
+        xhr.open("GET", url);
+
+        // If the request resolves, run this function
+        xhr.onload = function() {
+          const jsonResponse = JSON.parse(this.responseText); // convert JSON string to object
+          resolve(jsonResponse);
+        };
+
+        // If the request gets rejected, run this function
+        xhr.onerror = function() {
+          reject();
+        };
+
+        // Send request
+        xhr.send();
+      });
+    };
+
+    const myPromise = get("https://pokeapi.co/api/v2/pokemon/ditto/");
+
+    myPromise
+      .then(res => {
+        console.log("HELLO");
+      })
+      .catch(err => {
+        console.log("ERROR");
+      });
+  </script>
+</body>
+</html>

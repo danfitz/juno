@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function cleanWord(word) {
+      return word.trim().toLowerCase();
+    };
+
+    function isPalindrome(word) {
+      const cleanedWord = cleanWord(word);
+
+      const wordArr = cleanedWord.split("");
+
+      let start = 0;
+      let end = wordArr.length - 1;
+
+      while (start < end) {
+        if (wordArr[start] !== wordArr[end]) return false;
+
+        start += 1;
+        end -= 1;
+      };
+
+      return true;
+    };
+
+    function isPalindromeR(word) {
+      if (typeof word !== "string") {
+        throw "isPalindrome only takes in a string";
+      }
+
+      if (word.length < 2) {
+        return true;
+      }
+
+      if (word.slice(0, 1) !== word.slice(word.length - 1)) {
+        return false;
+      };
+
+      return isPalindromeR(word.slice(1, word.length - 1));
+    };
+
+    console.log(isPalindrome("ra2e2ar"));
+
+    console.log(isPalindromeR("racdecar"));
+  </script>
+</body>
+</html>

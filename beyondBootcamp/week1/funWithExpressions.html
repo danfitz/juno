@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+      Here are some examples of literals:
+        true, false
+        "some string",
+        1132,
+        { furnitureType: 'bed', comfy: true }
+        ['dog', 'bear', 'lion']
+        undefined
+        null
+    */
+
+    /*
+      Here are some examples of operators:
+        +
+        ===
+        !==
+        -
+        *
+        /
+        <
+        >
+    */
+
+    // Write an expression with:
+    // 1. Two literals and one operator
+    1 + "hello";
+    // 2. Three literals and two operators
+    1 < 2 < 3;
+    // 3. One variable, one literal, and one operator
+    const a = "yo";
+    a === "YO";
+    // 4. Two variables, one literal, and two operators
+    const b = true, c = false;
+    b === c === false;
+    // Convert the following if statements into conditional expressions
+    const age = 19
+
+    if (age === 19) {
+      console.log('Welcome to the clurb!')
+    } else {
+      console.log('You may not enter the clurb.')
+    }
+
+    // CONVERSION
+    age === 19 ? console.log("Welcome to the clurb!") : console.log("You may not enter the clurb.");
+
+    const raining = true
+    if (raining) {
+      console.log('You should bring an umbrella!')
+    } else {
+      console.log('You dont need an umbrella today.')
+    }
+
+    // CONVERSION
+    raining ? console.log("You should bring an umbrella!") : console.log("You dont need an umbrella today.");
+
+      // Write an assignment expression that evaluates to "Salamander"
+      name = "Salamander";
+      // Write an assignment expression that evaluates to the sum of 8 and 12
+      sum = 8 + 12;
+      // Write an assignment expression that evaluates to an assignment expression that assigns a variable named 'favouriteBand' to 'Backstreet Boys'
+      const favouriteBand = assExp = "Backstreet Boys";
+
+      // Write an if statement that uses any kind of expression which evaluates to a truthy value in order to print out the message 'We did it!'
+      if ("hello") {
+        console.log("We did it!");
+      };
+
+      // Write an if statement that uses any kind of expression which evaluates to a falsey value in order to print out the message 'Help! I fell and I can't get up!' into the console
+      if (null) {
+        console.log("Help! I fell and I can't get up!");
+      };
+
+      // Write an if statement that uses an assignment expression which evaluates to a truthy value in order to to print the message 'Why would you ever want to do this!?!' to the console
+      if (truthy = "yoo") {
+        console.log("Why would you ever want to do this?!");
+      };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Promises</title>
+</head>
+<body>
+  <script>
+    const delay = (milliseconds) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve();
+        }, milliseconds);
+      });
+    };
+
+    // delay(5000).then(function() {
+    //   console.log("DONE");
+    // });
+
+    const myPromise = new Promise(function(resolve, reject) {
+      resolve("hello");
+      console.log("HEYYY");
+    });
+
+    myPromise.then(function() { console.log("YOOO") });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function countVowels(word) {
+      if (word.includes(" "))
+      const vowels = ["a", "e", "i", "o", "u", "y"];
+
+      const wordArray = word.toLowerCase().trim().split("");
+
+      const numVowels = wordArray.reduce((acc, cur) => {
+        return vowels.indexOf(cur) >= 0 ? acc + 1 : acc;
+      }, 0);
+
+      return numVowels;
+    };
+
+    console.log(countVowels("helloooo"));
+  </script>
+</body>
+</html>

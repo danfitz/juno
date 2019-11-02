@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    Array.prototype.mapp = function(callback) {
+      const mappedArr = [];
+
+      for (let i = 0; i < this.length; i++) {
+        mappedArr.push(callback(this[i]));
+      };
+
+      return mappedArr;
+    };
+
+    const arr = [1, 2, 3, 4];
+    const arr2 = arr.mapp(item => item + 1);
+
+
+
+    Array.prototype.reducee = function(callback, initialValue) {
+      let acc = initialValue || this[0];
+
+      for (let i = initialValue ? 0 : 1; i < this.length; i++) {
+        acc = callback(acc, this[i]);
+      };
+
+      return acc;
+    };
+
+    const arr3 = arr.reducee((acc, cur) => {
+      return acc + cur;
+    }, 0);
+
+    console.log(arr3);
+
+
+    Array.prototype.filterr = function(callback) {
+      const filteredArr = [];
+
+      for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i)) {
+          filteredArr.push(this[i]);
+        };
+      };
+
+      return filteredArr;
+    };
+
+    const arr4 = arr.filterr(item => item > 2);
+
+    console.log(arr4);
+  </script>
+</body>
+</html>
