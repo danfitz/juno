@@ -163,3 +163,26 @@ Here are some basic ways of responding to errors *gracefully*:
   * Something like "You just ran into an error..."
 * **Shut down**
   * Some applications are so high risk that the application needs to shut down to minimize damage. Examples: software for hospitals, banks, etc.
+
+## Handling Errors
+
+1. You can codify your errors into an object for easy reference:
+
+```js
+const errors = {
+  NETWORK_ERROR = "Network Error",
+  NOT_FOUND = "Not Found"
+};
+```
+
+2. Instead of handling your error in your `catch` method (which is tightly coupled with your promise), you can detach by creating a generalized `handleError` function.
+
+```js
+// In React
+const handleError = error => {
+  this.setState({ error: error.message });
+};
+
+myPromise.catch(this.handleError);
+```
+

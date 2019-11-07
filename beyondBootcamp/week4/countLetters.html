@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    const countLetters = stringArray => {
+      const mapArray = stringArray.map(string => {
+        // OPTION 1: ITERATION
+        // const mapObj = {};
+
+        // Array.from(string).forEach(letter => {
+        //   if (mapObj[letter]) {
+        //     mapObj[letter] += 1;
+        //   } else {
+        //     mapObj[letter] = 1;
+        //   };
+        // });
+
+        // return mapObj;
+
+        // OPTION 2: REDUCE
+        const letterArray = [...string];
+
+        const mapObj = letterArray.reduce((acc, cur) => {
+          acc[cur] = acc[cur] ? acc[cur] + 1 : 1;
+          return acc;
+        }, {});
+
+        return mapObj;
+      });
+
+      return mapArray;
+    };
+
+    const stringArray = ['mmgdsdwqulhrinkatfjoyzxcbvq', 'megsdwpulhrinkasfjdyzxcbvk', 'megsdwpulhmibkatfjoyzccbvq', 'megsdwtuohrinkatfjoyzecbvq', 'megsdwpulhdinkatfyoyzxcbvb', 'megszwpulhrirkatfjoyexcbvq', 'eegsdwpulhzinkatfjoyzxdbvq', 'megsdwpulhginkatfjoyqucbvq', 'leqsdwpulhrinkatfeoyzxcbvq', 'megsdwpblhrandatfjoyzxcbvq', 'megrdwpudhrinvatfjoyzxcbvq'];
+
+    const mapArray = countLetters(stringArray);
+
+    console.log(mapArray);
+  </script>
+</body>
+</html>
