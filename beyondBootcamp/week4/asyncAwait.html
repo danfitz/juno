@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async/Await</title>
+</head>
+<body>
+  <script>
+    async function cook() {
+      const boil = new Promise((resolve, reject) => {
+        setTimeout(resolve, 2000);
+      });
+
+      await boil;
+      console.log("DONE!!");
+    };
+
+    cook();
+  </script>
+</body>
+</html>

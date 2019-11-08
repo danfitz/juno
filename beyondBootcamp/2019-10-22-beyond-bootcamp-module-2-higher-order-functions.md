@@ -95,3 +95,26 @@ There are generally 2 uses for callbacks:
 When you use `map` like `arr.map(() => {});`, you're usually passing an anonymous function--a function without a name, i.e., *NOT* a function declaration.
 
 The reason we can pass an anonymous function is that the higher order function like `map` will store the function in the **parameter** name! So it's not technically nameless.
+
+## Currying and Partial Application
+
+A **curried function** is a function that has *one* parameter and keeps returning a function until eventually it produces a value.
+
+Here's a function that doesn't use currying:
+
+```js
+const dragon = (name, size, element) => {
+  return `${name} is a ${size} dragon that breathes ${element}!`;
+};
+
+const myDragon = dragon("Toothless", "small", "love");
+```
+
+Here's the same idea but *curried*:
+```js
+const curriedDragon = name => size => element => `${name} is a ${size} dragon that breathes ${element}!`;
+
+const myCurriedDragon = curriedDragon("Toothless")("small")("love");
+```
+
+**Pro tip**: You usually use curried functions when you are performing complex calculations and some of the data will come later too!
