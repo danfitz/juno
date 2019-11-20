@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Unit Testing</title>
+</head>
+<body>
+  <script>
+    const assert = (testName, assertion) => {
+      if (assertion) {
+        console.log(`${testName}: passed`);
+      } else {
+        console.log(`${testName}: failed`);
+      };
+    };
+
+    // Write and test a function called `ageInSeconds`
+    // that takes years and outputs number of seconds in those years
+    const ageInSeconds = (years) => years * 365.25 * 24 * 60 * 60;
+
+    assert("5 years in seconds is 157788000", ageInSeconds(5) === 157788000);
+    assert("100 years in seconds is outputs 12502401240124214", ageInSeconds(100) === 12502401240124214);
+  </script>
+</body>
+</html>

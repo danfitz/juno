@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Unit Testing</title>
+</head>
+<body>
+  <script>
+    const assert = (testName, assertion) => {
+      if (assertion) {
+        console.log(`${testName}: passed`);
+      } else {
+        console.log(`${testName}: failed`);
+      };
+    };
+
+    const add = (a, b) => a + b;
+
+    assert("add(5,2) outputs 7", add(5,2) === 7); // Logs "add(5,2) outputs 7: passed"
+    assert("add(5,'5') outputs 10", add(5,"5") === 10); // Logs "add(5,'5') outputs 10: failed"
+
+  </script>
+</body>
+</html>
